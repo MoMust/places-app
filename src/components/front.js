@@ -1,7 +1,4 @@
-
-import './App.css';
-
-function App() {
+function Front() {
   return (
     <div >
      <p>This is front page</p>
@@ -9,4 +6,4 @@ function App() {
   );
 }
 
-export default App;
+export default Front;
