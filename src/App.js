@@ -4,6 +4,7 @@ import Front from './components/front';
 import About from './components/about';
 import Browser from './components/browser';
 import Nav from '../src/components/nav';
+// import Nav from '../src/sticky/nav2';
 // Creates paths for singel page from components
 function App() {
   return (

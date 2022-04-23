@@ -1,7 +1,8 @@
+import '../css/browser.css';
 function Browser() {
   return (
-    <div >
-     <p>This is browser page</p>
+    <div id='body'>
+      
     </div>
   );
 }
