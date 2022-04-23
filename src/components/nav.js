@@ -2,6 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import '../css/nav.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from '../icons/planeLogo.png'
 function Nav() {
 
 
@@ -9,6 +10,7 @@ function Nav() {
      <header className="header">
         <div className='row'>
             <div className="icon-wrapper col-12">
+                <img class='logo-image' src={logo}></img>
                 <div className="icon-text">
                     <p>Travel Places</p>
                 </div>
