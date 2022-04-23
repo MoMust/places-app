@@ -4,15 +4,15 @@ import '../css/nav.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 function Nav() {
   return (
-     <header class="header">
-        <div class="row">
-            <div class="icon-wrapper col-12">
-                <div class="icon-text">
+     <header className="header">
+        <div className='row'>
+            <div className="icon-wrapper col-12">
+                <div className="icon-text">
                     <p>Travel Places</p>
                 </div>
             </div>
-            <div class="nav-wrapper col-12">
-                <nav class="nav-bar">
+            <div className='nav-wrapper col-12'>
+                <nav className="nav-bar">
                     <ul>
                        <NavLink exact to="/" className='nav-items'>Home</NavLink>
                         <NavLink to="/Browser" className='nav-items'>Browser</NavLink>
