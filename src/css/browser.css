@@ -1,6 +1,46 @@
-#body{
-    color:blue;
-    height: 100vw;
+#body {
+    height: 100%;
     background-color: #eae9e2;
+    border: solid 1px red;
     /* background-color: #2f2f2f; */
+    display: flex;
+    justify-content: center;
+}
+
+#output {
+    width:60%;
+    border: solid 1px blue;
+    margin: 0;
+    padding: 0;
+}
+
+.head-row{
+    
+}
+
+.head-row {
+    height: 25vw;
+    width:100%;
+}
+
+.name {
+    font-size: 30px;
+    height: 4vw;
+}
+
+ .exact-img {
+    border: solid 1px red;
+    width: 100%;
+    height: 14vw;
+}
+
+.card-wrapper {
+    border: solid 1px black;
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+
+.description {
+    border: solid 1px black;
 }
