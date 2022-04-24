@@ -20,23 +20,26 @@ function Browser() {
     if(Array.isArray(productObject.data)){
       productObject.data.forEach(element => {
         let attr = element.attributes;
+        let img = attr.image.data.attributes.formats.medium.url;
         console.log(attr);
         output +=`
-         <div class='row d-flex justify-content-center head-row p-0 m-0'>
-                <div class="card-wrapper row d-flex p-0 m-0 col-6">
-                    <div class="name col-12">
-                        <p>Stockholm</p>
+         <div class='row head-row p-0 m-0 mt-5'>
+                <div class="card-wrapper col-6">
+                    <div class="name col-12 mb-2">
+                        <p>${attr.name}</p>
                     </div>
                     
-                    <div class="img col-12 ">
-                        <img class='exact-img' src=${image}>
+                    <div class="img col-12">
+                        <img class='exact-img' src=${img}>
                     </div>
                 </div>
                 
-                <div class="description col-6">
-                    <p>Description</p>
-                    <p>Et eiusmod nisi tempor veniam duis voluptate esse. Lorem occaecat consectetur id quis cillum minim excepteur do dolore adipisicing culpa nulla elit. Incididunt non sunt amet adipisicing amet. Excepteur consequat velit ad anim est eu proident.</p>
+                <div class="description-wrapper col-6">
+                <div class="desc">
+                    <p class="mb-0">${attr.description}</p>
+                    </div>
                 </div>
+                
           </div>
         `
         document.getElementById('output').innerHTML = output;
@@ -46,7 +49,7 @@ function Browser() {
   renderObjects();
   return (
     <div id='body'>
-      <div id ="output">
+      <div id ="output" className='row'>
         
       </div>
       
