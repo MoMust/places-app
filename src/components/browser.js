@@ -1,5 +1,5 @@
 import '../css/browser.css';
-import image from '../testing/image.jpg';
+import '../css/front.css';
 
 function Browser() {
 
@@ -28,17 +28,19 @@ function Browser() {
                     <div class="name col-12 mb-2">
                         <p>${attr.name}</p>
                     </div>
+                     <div class="description-wrapper">
+                        <div class="desc">
+                          <p class="mb-0">${attr.description}</p>
+                        </div>
+                      </div>
                     
-                    <div class="img col-12">
+                </div>
+
+                <div class="img col-6">
                         <img class='exact-img' src=${img}>
-                    </div>
                 </div>
                 
-                <div class="description-wrapper col-6">
-                <div class="desc">
-                    <p class="mb-0">${attr.description}</p>
-                    </div>
-                </div>
+               
                 
           </div>
         `
