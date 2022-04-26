@@ -1,0 +1,25 @@
+{
+"articles":[
+    {
+        "name": "Stockholm",
+        "country": "Sweden",
+        "description": "",
+        "image": "",
+        "id": 1
+    },
+    {
+        "name": "Göteborg",
+        "country": "Sweden",
+        "description": "",
+        "image": "",
+        "id": 2
+    },
+    {
+        "name": "Malmö",
+        "country": "Sweden",
+        "description": "",
+        "image": "",
+        "id": 3
+    }
+]
+}
