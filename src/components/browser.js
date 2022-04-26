@@ -9,7 +9,7 @@ function Browser() {
   const [trip, setTrips] = useState(null)
 
   useEffect(() =>{
-    fetch('http://localhost:8000/articles')
+    fetch('http://localhost:8000/trips')
     .then(res =>{
       return res.json();
     })
