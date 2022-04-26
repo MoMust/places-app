@@ -1,61 +1,29 @@
+import { useState, useEffect } from 'react';
 import '../css/browser.css';
 import '../css/front.css';
+import TripList from './tripList';
+
 
 function Browser() {
 
-  async function renderObjects(){
-    //  let productTypeApi = 'Countries';
-    let apiUrl = 'http://localhost:1337';
-    
+  const [trip, setTrips] = useState(null)
 
-    let urlLocalhost = apiUrl + '/api/Cities?populate=image';
-
-    //Fetch
-    let urlResponse = await fetch(urlLocalhost);
-    let productObject = await urlResponse.json();
-    let output = '';
-    // kvart i 4 obelsiken slottsbacken
-
-    //Check if array
-    if(Array.isArray(productObject.data)){
-      productObject.data.forEach(element => {
-        let attr = element.attributes;
-        let img = attr.image.data.attributes.formats.medium.url;
-        console.log(attr);
-        output +=`
-         <div class='row head-row p-0 m-0 mt-5'>
-                <div class="card-wrapper col-6">
-                    <div class="name col-12 mb-2">
-                        <p>${attr.name}</p>
-                    </div>
-                     <div class="description-wrapper">
-                        <div class="desc">
-                          <p class="mb-0">${attr.description}</p>
-                        </div>
-                      </div>
-                    
-                </div>
-
-                <div class="img col-6">
-                        <img class='exact-img' src=${img}>
-                </div>
-                
-               
-                
-          </div>
-        `
-        document.getElementById('output').innerHTML = output;
-      });
-    }
-  }
-  renderObjects();
+  useEffect(() =>{
+    fetch('http://localhost:8000/articles')
+    .then(res =>{
+      return res.json();
+    })
+    .then(data =>{
+      setTrips(data);
+    })
+  },[])
   return (
     <div id='body'>
-      <div id ="output" className='row'>
+      {trip && <TripList trips={trip}/>}
         
-      </div>
-      
     </div>
+      
+    
   );
 }
 
