@@ -25,6 +25,12 @@
     sans-serif;
     font-weight: 600;
     background-color: rgb(252, 247, 238);
+    text-decoration: none;
+    color: black
+}
+.head-row:hover {
+background-color: rgb(248, 238, 209);
+color: black
 }
 
 .card-wrapper {
@@ -64,4 +70,16 @@
  font-weight: 600;
  
  width:100%;
+}
+
+.loading-wrapper{
+   position: relative;
+   display: flex;
+   justify-content: center;
+}
+.loading{
+    position: absolute;
+    margin-top:10rem;
+    font-size: 5rem;
+    color: #a1a2a3;
 }

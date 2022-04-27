@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 
 
 function TripList({trips}) {
@@ -8,10 +9,11 @@ function TripList({trips}) {
     
 return(
     <>
-     <div  className="trip-list">
+    
+    <div  className="trip-list row">
          
          {trips.map((trip)=>(
-             <div key={trip.id} className='row head-row p-0 m-0 mt-5'>
+             <Link to='/Places' key={trip.id} className='row head-row p-0 m-0 mt-5'>
                 <div className="card-wrapper col-6">
                     <div className="name col-12 mb-2">
                         <p>{trip.name}</p>
@@ -28,7 +30,7 @@ return(
                     </div>
                 </div>
                 
-          </div>
+          </Link>
          ))}
      </div>
     </>

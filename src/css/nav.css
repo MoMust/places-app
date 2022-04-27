@@ -115,20 +115,17 @@ nav ul {
     color: #ecebe8;
     /* color: #2F2F2F; */
     letter-spacing: 1.5px;
-    
-}
-
-a {
     position: relative;
     list-style: none;
     text-decoration: none;
     padding: 0 10px;
+    }
+    /* List hover effects */
+.nav-items:hover{
+    color:rgb(235, 233, 233) !important;
 }
-/* List hover effects */
-a:hover{
-    color:rgb(235, 233, 233)!important;
-}
-a:after {
+
+.nav-items:after {
     content: "";
     position: absolute;
     /* background-color: rgb(35, 99, 99); */
@@ -139,7 +136,7 @@ a:after {
     bottom: -10px;
 }
 
-a:hover:after{
+.nav-items:hover:after{
     width:100%;
     transition:0.3s;
 }
