@@ -1,7 +1,7 @@
 
 import '../css/browser.css';
 import '../css/front.css';
-import TripList2 from './tripList2';
+import SpotList from './spotList';
 import useFetch from './useFetch';
 
 
@@ -16,7 +16,7 @@ function Places() {
       <div className='loading-wrapper'>
          <div className="loading">Loading...</div>
       </div>}
-    <div id='body'>{data && <TripList2 trips={data}/>}
+    <div id='body'>{data && <SpotList trips={data}/>}
      
     </div>
     </>

@@ -1,7 +1,11 @@
+import ImgCover from '../icons/travel-world-map.jpg'
+import '../css/front.css'
 function Front() {
   return (
     <div >
-     <p>This is front page</p>
+     <header>
+      <img className='img-cover' src={ImgCover}></img>
+     </header>
     </div>
   );
 }

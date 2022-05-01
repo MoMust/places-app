@@ -1,12 +1,13 @@
 import {Link} from 'react-router-dom'
 
 
-function TripList2({trips}) {
+function SpotList({trips}) {
     //Check if its not an array if so set prop to a singel element array. (For singel objects)
     if (!Array.isArray(trips)){
         trips = [trips];
     }
-    console.log(trips[0].spot);
+    console.log(trips[0].spot[0]);
+    console.log(trips[0].spot[1]);
     
 return(
     <>
@@ -43,4 +44,4 @@ return(
  
 }
 
-export default TripList2;
+export default SpotList;
