@@ -2,7 +2,7 @@
 import '../css/browser.css';
 import '../css/front.css';
 import TripList from './tripList';
-import useFetch from './useFetch';
+import useFetch from './fetchPlaces';
 
 
 //This is browser page 

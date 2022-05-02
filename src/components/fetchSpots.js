@@ -23,8 +23,6 @@ const useFetchSpot = (url) =>{
         setData(element.spot);
     
       }
-      
-      
       setisLoading(false)
     })
   },[url]);

@@ -3,7 +3,7 @@ import '../css/browser.css';
 import '../css/front.css';
 // import SpotList from './spotList';
 import TripList from './tripList';
-import useFetchSpot from './useFetchSpot';
+import useFetchSpot from './fetchSpots';
 
 
 //This is browser page 
