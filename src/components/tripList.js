@@ -6,7 +6,7 @@ function TripList({trips}) {
     if (!Array.isArray(trips)){
         trips = [trips];
     }
-    console.log(trips[0].spot);
+    // console.log(trips[0].spot);
     
 return(
     <>

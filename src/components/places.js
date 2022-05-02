@@ -1,14 +1,15 @@
 
 import '../css/browser.css';
 import '../css/front.css';
-import SpotList from './spotList';
-import useFetch from './useFetch';
+// import SpotList from './spotList';
+import TripList from './tripList';
+import useFetchSpot from './useFetchSpot';
 
 
 //This is browser page 
 function Places() {
  
- const {data, isLoading} = useFetch(`http://localhost:8000/trips`)
+ const {data, isLoading} = useFetchSpot(`http://localhost:8000/trips`)
 
   return (
     <>
@@ -16,7 +17,7 @@ function Places() {
       <div className='loading-wrapper'>
          <div className="loading">Loading...</div>
       </div>}
-    <div id='body'>{data && <SpotList trips={data}/>}
+    <div id='body'>{data && <TripList trips={data}/>}
      
     </div>
     </>

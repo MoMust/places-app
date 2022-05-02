@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 
-const useFetch = (url) =>{
+const useFetchSpot = (url) =>{
      //Use state for changing the state of the page
     const [data, setData] = useState(null)
     const [isLoading, setisLoading] = useState(true)
-    let num = 2;
+    let num = 1;
  useEffect(() =>{
      
     //Fetch objects from json database
@@ -15,8 +15,15 @@ const useFetch = (url) =>{
     })
     //Get data from json resp and set new state with data
     .then(data =>{
+      for (let i = 0; i < data.length; i++) {
+        let element = data[i];
+        if(element.id !== num){continue}
+        // console.log(element);
+        
+        setData(element.spot);
+    
+      }
       
-      setData(data);
       
       setisLoading(false)
     })
@@ -24,4 +31,4 @@ const useFetch = (url) =>{
   return {data, isLoading}
 }
 
-export default useFetch;
+export default useFetchSpot;
