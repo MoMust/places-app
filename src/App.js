@@ -3,7 +3,6 @@ import {Routes, Route} from 'react-router-dom';
 import Front from './components/front';
 import About from './components/about';
 import Browser from './components/browser';
-import Nav from '../src/components/nav';
 import Places from '../src/components/places'
 
 // import Nav from '../src/sticky/nav2';

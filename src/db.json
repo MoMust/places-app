@@ -9,13 +9,13 @@
         "spot":[
              {
             "name": "Stockholmsparken",
-            "description": "Some text"
-
+            "description": "Some text",
+            "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650805313/medium_image_78fddc1aaf.jpg"
         },
          {
             "name": "Stockholmspsrken2",
-            "description": "Some text"
-
+            "description": "Some text",
+            "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650805313/medium_image_78fddc1aaf.jpg"
         }
         ] 
         

@@ -4,7 +4,7 @@ import '../css/front.css';
 // import SpotList from './spotList';
 import TripList from './tripList';
 import useFetchSpot from './fetchSpots';
-
+import Nav from './nav';
 
 //This is browser page 
 function Places() {
@@ -13,6 +13,7 @@ function Places() {
 
   return (
     <>
+    <Nav />
      {isLoading &&
       <div className='loading-wrapper'>
          <div className="loading">Loading...</div>
