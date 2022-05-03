@@ -3,7 +3,7 @@ import '../css/browser.css';
 import '../css/front.css';
 import TripList from './tripList';
 import useFetch from './fetchPlaces';
-
+import Nav from './nav';
 
 //This is browser page 
 function Browser() {
@@ -12,6 +12,7 @@ function Browser() {
  
   return (
     <>
+    <Nav />
      {isLoading &&
       <div className='loading-wrapper'>
          <div className="loading">Loading...</div>

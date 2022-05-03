@@ -11,7 +11,6 @@ import Places from '../src/components/places'
 function App() {
   return (
     <>
-    <Nav />
         <Routes>
             <Route exact path="/" element={<Front />}/>
             <Route path="/about" element={<About />}/>
