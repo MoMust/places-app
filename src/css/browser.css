@@ -40,6 +40,9 @@
 
 .card-text{
     grid-area: text;
+    font-family: rajdhani;
+    font-weight: 600;
+    font-size: 18px;
 }
 .card-stats{
     grid-area: stats;

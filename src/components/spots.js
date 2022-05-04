@@ -1,5 +1,5 @@
 
-function CityList({cities}) {
+function Spots({cities}) {
     //Check if its not an array if so set prop to a singel element array. (For singel objects)
     if (!Array.isArray(cities)){
         cities = [cities];
@@ -32,4 +32,4 @@ return(
  
 }
 
-export default CityList;
+export default Spots;

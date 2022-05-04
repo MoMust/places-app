@@ -14,15 +14,17 @@ const useFetchSpot = (url) =>{
       return res.json(); 
     })
     //Get data from json resp and set new state with data
+    // for (let i = 0; i < data.length; i++) {
+    //     let element = data[i];
+    //     if(element.id !== num){continue}
+    //     // console.log(element);
+    // }
     .then(data =>{
-      for (let i = 0; i < data.length; i++) {
-        let element = data[i];
-        if(element.id !== num){continue}
-        // console.log(element);
+      
         
-        setData(element.spot);
+        setData(data);
     
-      }
+      
       setisLoading(false)
     })
   },[url]);
