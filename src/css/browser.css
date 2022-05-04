@@ -2,84 +2,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
 
 #body {
-    height: 100%;
-    background-color: #eae9e2;
-    /* border: solid 1px red; */
-    /* background-color: #2f2f2f; */
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    background-color: grey;
+    align-items: center;
     justify-content: center;
+    overflow: hidden;
+    gap:9%;
+    
 }
 
-#output {
-    width: 50%;
-    /* border: solid 1px blue; */
-    margin: 0;
-    padding: 0;
+.card{
+    display:grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 250px 250px 100px;
+    grid-template-areas: "image" "text" "stats";
+    border: none;
+    border-radius: 18px;
+    background:rgba(255, 254, 254, 0.843);
+    filter: brightness(50%);
+    text-align: center;
+}
+.card:hover{
+    transition: 0.9s;
+    filter: brightness(100%);
 }
 
-.head-row {
-    height: 20vw;
-    width:100%;
-    overflow:hidden;
-    font-family: 'Rajdhani',
-    sans-serif;
-    font-weight: 600;
-    background-color: rgb(252, 247, 238);
-    text-decoration: none;
-    color: black
-}
-.head-row:hover {
-background-color: rgb(248, 238, 209);
-color: black
+.card-image{
+    grid-area: image;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    max-width: 100%;
+    max-height: 100%;
+    background-size: cover;
 }
 
-.card-wrapper {
-    /* border: solid 1px black; */
-    margin: 0;
-    padding: 0;
-    width: 100%;
+.card-text{
+    grid-area: text;
 }
-
-.name {
-    font-size: 2vw;
-    height: 4vw;
-}
-
-.exact-img {
-    /* border: solid 1px red; */
-    max-height:100%;
-    max-width:100%;
-    padding: 1vh;
-    border-radius: 10px;
-}
-
-.description-wrapper {
-    /* border: solid 1px black; */
-    overflow-wrap: break-word;
-}
-
-.desc{
-    font-size: 1.2vw;
-    font-family: 'Rajdhani',
-    sans-serif;
-}
-
-.desc > p{
- 
- padding-top:10px;
- font-weight: 600;
- 
- width:100%;
-}
-
-.loading-wrapper{
-   position: relative;
-   display: flex;
-   justify-content: center;
-}
-.loading{
-    position: absolute;
-    margin-top:10rem;
-    font-size: 5rem;
-    color: #a1a2a3;
+.card-stats{
+    grid-area: stats;
 }

@@ -1,60 +1,48 @@
-import '../css/browser.css';
-import '../css/front.css';
 
-function Browser() {
 
-  async function renderObjects(){
-    //  let productTypeApi = 'Countries';
-    let apiUrl = 'http://localhost:1337';
-    
 
-    let urlLocalhost = apiUrl + '/api/Cities?populate=image';
-
-    //Fetch
-    let urlResponse = await fetch(urlLocalhost);
-    let productObject = await urlResponse.json();
+function CityList({cities}) {
+    //Check if its not an array if so set prop to a singel element array. (For singel objects)
+    if (!Array.isArray(cities)){
+        cities = [cities];
+    }
+    // console.log(trips[0].spot);
+    let data = cities[0].trips;
     let output = '';
-    // kvart i 4 obelsiken slottsbacken
-
-    //Check if array
-    if(Array.isArray(productObject.data)){
-      productObject.data.forEach(element => {
-        let attr = element.attributes;
-        let img = attr.image.data.attributes.formats.medium.url;
-        console.log(attr);
-        output +=`
-         <div class='row head-row p-0 m-0 mt-5'>
-                <div class="card-wrapper col-6">
+return(
+    <>
+        <div class="trip-list row">
+    
+         {data.forEach(city => {output +=`
+         <div class='row p-0 m-0 mt-5'>
+                <div class="card-wrapper col-6 ">
                     <div class="name col-12 mb-2">
-                        <p>${attr.name}</p>
+                        <p>${city.name}</p>
                     </div>
                     
                     <div class="img col-12">
-                        <img class='exact-img' src=${img}>
+                        <img class='exact-img' src=${city.image}></img>
                     </div>
                 </div>
                 
-                <div class="description-wrapper col-6">
+                <div class="description-wrapper col-12">
                 <div class="desc">
-                    <p class="mb-0">${attr.description}</p>
+                    <p class="mb-0">${city.description}</p>
                     </div>
                 </div>
                 
-          </div>
-        `
-        document.getElementById('output').innerHTML = output;
-      });
-    }
-  }
-  renderObjects();
-  return (
-    <div id='body'>
-      <div id ="output" className='row'>
+          </div>`
+             
+          document.getElementById('body').innerHTML = output;
+         })}
         
-      </div>
-      
-    </div>
-  );
+     </div>
+    </>
+    
+)
+ 
+
+ 
 }
 
-export default Browser;
+export default CityList;

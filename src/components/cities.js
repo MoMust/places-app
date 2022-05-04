@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+
 
 
 function CityList({cities}) {
@@ -7,35 +7,25 @@ function CityList({cities}) {
         cities = [cities];
     }
     // console.log(trips[0].spot);
-    
+    let data = cities[0].data;
+    let output = '';
 return(
     <>
-    
-    <div  className="trip-list row">
-         
-         {cities.map((city)=>(
+         {data.forEach(city => {output +=`
+        <div class="card">
+            <div class="card-image" style="background: url(${city.image})"></div>
+          <div class="card-text">
+              <span class="date">4 days</span>
+              <h2>${city.name}</h2>
+              <p>${city.description}</p>
+          </div>
+          <div class="card-stats"></div>
+          </div>`
              
-                  <Link to='/Places' key={city.id} className='row head-row p-0 m-0 mt-5'>
-                <div className="card-wrapper col-6">
-                    <div className="name col-12 mb-2">
-                        <p>{city.name}</p>
-                    </div>
-                    
-                    <div className="img col-12">
-                        <img className='exact-img' src={city.image}></img>
-                    </div>
-                </div>
-                
-                <div className="description-wrapper col-6">
-                <div className="desc">
-                    <p className="mb-0">{city.description}</p>
-                    </div>
-                </div>
-                
-          </Link>
-            
-         ))}
-     </div>
+          document.getElementById('body').innerHTML = output;
+         })}
+        
+     
     </>
     
 )
