@@ -1,14 +1,15 @@
 
 import '../css/browser.css';
 import '../css/front.css';
-import TripList from './tripList';
+
 import useFetch from './fetchPlaces';
 import Nav from './nav';
+import CityList from './cities';
 
 //This is browser page 
 function Browser() {
  
- const {data, isLoading} = useFetch(`http://localhost:8000/trips`)
+ const {data, isLoading} = useFetch(`http://localhost:8000/cities`)
  
   return (
     <>
@@ -17,7 +18,7 @@ function Browser() {
       <div className='loading-wrapper'>
          <div className="loading">Loading...</div>
       </div>}
-    <div id='body'>{data && <TripList trips={data}/>}
+    <div id='body'>{data && <CityList cities={data}/>}
      
     </div>
     </>

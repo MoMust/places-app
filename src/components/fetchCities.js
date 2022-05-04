@@ -15,9 +15,7 @@ const useFetch = (url) =>{
     })
     //Get data from json resp and set new state with data
     .then(data =>{
-      
       setData(data);
-      
       setisLoading(false)
     })
   },[url]);

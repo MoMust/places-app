@@ -9,7 +9,7 @@ import Nav from './nav';
 //This is browser page 
 function Places() {
  
- const {data, isLoading} = useFetchSpot(`http://localhost:8000/trips`)
+ const {data, isLoading} = useFetchSpot(`http://localhost:8000/spots`)
 
   return (
     <>

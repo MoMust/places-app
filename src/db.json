@@ -1,22 +1,18 @@
 {
-"data":[
+"trips":[
     {
         "name": "Stockholm",
         "country": "Sweden",
         "description": "Welcome to Stockholm, one of the world’s most beautiful capitals. Built on 14 islands around one of Europe’s largest and best-preserved mediaeval city centres, the city is stunningly located by the Baltic Sea.",
         "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650805313/medium_image_78fddc1aaf.jpg",
-        "id":1
-        
-        
-        
-
+        "cityId":1
     },
     {
         "name": "Göteborg",
         "country": "Sweden",
         "description": "Welcome to Stockholm, one of the world’s most beautiful capitals. Built on 14 islands around one of Europe’s largest and best-preserved mediaeval city centres, the city is stunningly located by the Baltic Sea.",
         "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650806605/medium_Goteborg_sparvagn_i_Stock_495376272_5c781b5bbf.jpg",
-        "id": 2
+        "cityId": 2
            
     },
     {
@@ -24,7 +20,7 @@
         "country": "Sweden",
         "description": "Welcome to Stockholm, one of the world’s most beautiful capitals. Built on 14 islands around one of Europe’s largest and best-preserved mediaeval city centres, the city is stunningly located by the Baltic Sea.",
         "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650806234/medium_Malmoe_e1638117230291_3505397693.jpg",
-        "id": 3
+        "cityId": 3
     }
 ]
 }
