@@ -58,3 +58,64 @@
 .card-stats{
     grid-area: stats;
 }
+
+
+.create-card {
+    display:grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 70px 350px 100px;
+    grid-template-areas: "text" "stats";
+    border: none;
+    border-radius: 18px;
+    background:rgba(255, 254, 254, 0.843);
+    filter: brightness(50%);
+    text-align: center;
+    margin-top: 20px;
+    max-width: 400px;
+    margin:0 auto;
+    text-align: center;
+}
+
+.create-card label{
+    text-align: left;
+    display:block;
+}
+
+.create-card h2{
+    font-size:30px;
+    color: #549fc4;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.create-card input, .create-card textarea{
+    width:100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid white;
+    box-sizing: border-box;
+    display: block;
+
+}
+
+.create-card button{
+    background: #549fc4;
+    color: #fff;
+    border:0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor:pointer;
+
+}
+/* .card-text input {
+    margin-left: 30px;
+
+}
+.card-text label {
+    margin-left: 30px;
+
+}
+
+.card-text textarea{
+    margin-left: 10px;
+} */

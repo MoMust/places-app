@@ -12,7 +12,7 @@ function Spots({spots}) {
 
     let cityData = spots[0].data;
     let arr = [];
-    let output = '';
+    
     
     //Chek if cityKey matches spots reference key
     for (let i = 0; i < cityData.length; i++) {
@@ -25,19 +25,41 @@ function Spots({spots}) {
             console.log(arr);}
     
     }
+
+    let output = `  <div class="card create-card">
+            <div class="card-image"></div>
+          <div class="card-text card-text-area">
+              
+              <h2>Create new spot</h2>
+              <form>
+              <label>Spot title</label>
+              <input 
+              type="text" 
+              required>
+              </input>
+              <br>
+              <label>Description</label>
+              <textarea 
+              required>
+              </textarea>
+              <br>
+              <label>Choose City the spot belongs to</label>
+              <br>
+              <select>
+                <option value="Stockholm">Stockholm</option>
+                <option value="Göteborg">Göteborg</option>
+                <option value="Malmö">Malmö</option>
+              </select>
+              <button>Add card</button>
+          </div>
+          <div className="card-stats"></div>
+          </div>`;
     
 return(
     <>
-    {output += ` <div class="card">
-            <div class="card-image"></div>
-          <div class="card-text">
-              <span class="date">4 days</span>
-              <h2>Create new spot</h2>
-          </div>
-          <div class="card-stats"></div>
-          </div>`}
+    
 
-          {document.getElementById('body').innerHTML = output}
+          
          {arr.forEach(spot => {
             //  console.log(spot)
              output +=`
