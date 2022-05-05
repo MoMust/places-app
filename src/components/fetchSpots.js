@@ -20,14 +20,12 @@ const useFetchSpot = (url) =>{
     //     // console.log(element);
     // }
     .then(data =>{
-      
-        
         setData(data);
     
       
       setisLoading(false)
     })
-  },[url]);
+  },[url, url]);
   return {data, isLoading}
 }
 

@@ -3,14 +3,15 @@
 
 #body {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: flex;
     background-color: grey;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    gap:9%;
-    
+    gap:5%;
+    display:grid;
+    grid-template-columns: auto auto auto;
 }
 
 .card{
@@ -23,6 +24,7 @@
     background:rgba(255, 254, 254, 0.843);
     filter: brightness(50%);
     text-align: center;
+    margin-top: 20px;
 }
 .card:hover{
     transition: 0.9s;

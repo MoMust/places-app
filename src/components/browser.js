@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 import '../css/browser.css';
 import '../css/front.css';
 
-import useFetch from './fetchPlaces';
+import useFetch from './fetchCities';
 import Nav from './nav';
 import CityList from './cities';
 

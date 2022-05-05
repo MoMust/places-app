@@ -1,24 +1,39 @@
 
-function Spots({cities}) {
+
+function Spots({spots}) {
+    let cityKey = localStorage.getItem('objId');
     //Check if its not an array if so set prop to a singel element array. (For singel objects)
-    if (!Array.isArray(cities)){
-        cities = [cities];
+    if (!Array.isArray(spots)){
+        spots = [spots];
     }
     // console.log(trips[0].spot);
-    let data = cities[0].data;
+    let cityData = spots[0].data;
+    // console.log(data)
     let output = '';
+    console.log(cityKey)
+
+    // for (let i = 0; i < cityData.length; i++) {
+    //     if(cityKey === cityData[i].cityRefId){
+    //         console.log(cityData[i].cityRefId)
+    //     }
+        
+        
+    // }
+    
 return(
     <>
-         {data.forEach(city => {output +=`
-        <a href="./places"><div class="card">
-            <div class="card-image" style="background: url(${city.image})"></div>
+         {cityData.forEach(spot => {
+            //  console.log(spot)
+             output +=`
+       <div class="card">
+            <div class="card-image" style="background: url(${spot.image})"></div>
           <div class="card-text">
               <span class="date">4 days</span>
-              <h2>${city.name}</h2>
-              <p>${city.description}</p>
+              <h2>${spot.name}</h2>
+              <p>${spot.description}</p>
           </div>
           <div class="card-stats"></div>
-          </div></a}>`;
+          </div>`;
              
           document.getElementById('body').innerHTML = output;
          })}

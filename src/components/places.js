@@ -9,7 +9,9 @@ import Nav from './nav';
 //This is browser page 
 function Places() {
  
- const {data, isLoading} = useFetchSpot(`http://localhost:8000/cities`)
+ const {data, isLoading} = useFetchSpot(`http://localhost:8000/spots`)
+//  console.log(data)
+ 
 
   return (
     <>
@@ -18,7 +20,7 @@ function Places() {
       <div className='loading-wrapper'>
          <div className="loading">Loading...</div>
       </div>}
-    <div id='body'>{data && <Spots cities={data}/>}
+    <div id='body'>{data && <Spots spots={data}/>}
      
     </div>
     </>
