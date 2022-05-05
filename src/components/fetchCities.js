@@ -6,8 +6,9 @@ const useFetch = (url) =>{
     const [isLoading, setisLoading] = useState(true)
     
  useEffect(() =>{
-     
-    //Fetch objects from json database
+   //Set timer for loading 
+    //  setTimeout(()=>{
+       //Fetch objects from json database
     fetch(url)
     //After fetch wait for response and convert to json
     .then(res =>{
@@ -18,6 +19,8 @@ const useFetch = (url) =>{
       setData(data);
       setisLoading(false)
     })
+    //  }, 20000)
+   
   },[url]);
   return {data, isLoading}
 }

@@ -4,7 +4,6 @@ const useFetchSpot = (url) =>{
      //Use state for changing the state of the page
     const [data, setData] = useState(null)
     const [isLoading, setisLoading] = useState(true)
-    let num = 1;
  useEffect(() =>{
      
     //Fetch objects from json database
