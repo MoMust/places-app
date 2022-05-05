@@ -1,7 +1,6 @@
 
 import '../css/browser.css';
 import '../css/front.css';
-// import SpotList from './spotList';
 import Spots from './spots';
 import useFetchSpot from './fetchSpots';
 import Nav from './nav';
@@ -16,13 +15,16 @@ function Places() {
   return (
     <>
     <Nav />
+    
      {isLoading &&
       <div className='loading-wrapper'>
          <div className="loading">Loading...</div>
       </div>}
+      
     <div id='body'>{data && <Spots spots={data}/>}
-     
+      
     </div>
+   
     </>
    
   );

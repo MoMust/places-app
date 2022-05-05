@@ -1,3 +1,5 @@
+import Create from './create'
+
 // Get saved city object id from browser page and save in variabel
 let cityKey = localStorage.getItem('objId');
 //Function/component - To get spots in each city
@@ -26,6 +28,16 @@ function Spots({spots}) {
     
 return(
     <>
+    {output += ` <div class="card">
+            <div class="card-image"></div>
+          <div class="card-text">
+              <span class="date">4 days</span>
+              <h2>Create new spot</h2>
+          </div>
+          <div class="card-stats"></div>
+          </div>`}
+
+          {document.getElementById('body').innerHTML = output}
          {arr.forEach(spot => {
             //  console.log(spot)
              output +=`
@@ -42,6 +54,7 @@ return(
           document.getElementById('body').innerHTML = output;
          })}
         
+          
      
     </>
     
