@@ -14,6 +14,14 @@
     grid-template-columns: auto auto auto;
 }
 
+.loading-wrapper{
+    margin-top: 20rem;
+}
+.loading{
+    font-size: 66px;
+
+}
+
 .card{
     display:grid;
     grid-template-columns: 400px;

@@ -1,28 +1,32 @@
-
-
+// Get saved city object id from browser page and save in variabel
+let cityKey = localStorage.getItem('objId');
+//Function/component - To get spots in each city
 function Spots({spots}) {
-    let cityKey = localStorage.getItem('objId');
+    
     //Check if its not an array if so set prop to a singel element array. (For singel objects)
     if (!Array.isArray(spots)){
         spots = [spots];
     }
-    // console.log(trips[0].spot);
-    let cityData = spots[0].data;
-    // console.log(data)
-    let output = '';
-    console.log(cityKey)
 
-    // for (let i = 0; i < cityData.length; i++) {
-    //     if(cityKey === cityData[i].cityRefId){
-    //         console.log(cityData[i].cityRefId)
-    //     }
-        
-        
-    // }
+    let cityData = spots[0].data;
+    let arr = [];
+    let output = '';
+    
+    //Chek if cityKey matches spots reference key
+    for (let i = 0; i < cityData.length; i++) {
+
+        //Key do not match
+        if(cityKey != cityData[i].cityRefId){
+            // console.log('no match')
+           //Key matches, create an array with matching objects 
+        }else{arr.push(cityData[i]);
+            console.log(arr);}
+    
+    }
     
 return(
     <>
-         {cityData.forEach(spot => {
+         {arr.forEach(spot => {
             //  console.log(spot)
              output +=`
        <div class="card">
