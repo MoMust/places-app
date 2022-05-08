@@ -1,4 +1,5 @@
-import Create from './create'
+// import Create from './create'
+// import { useState } from "react"
 
 // Get saved city object id from browser page and save in variabel
 let cityKey = localStorage.getItem('objId');
@@ -12,7 +13,7 @@ function Spots({spots}) {
 
     let cityData = spots[0].data;
     let arr = [];
-    
+    let output = '';
     
     //Chek if cityKey matches spots reference key
     for (let i = 0; i < cityData.length; i++) {
@@ -26,42 +27,52 @@ function Spots({spots}) {
     
     }
 
-    let output = `  <div class="card create-card">
-            <div class="card-image"></div>
-          <div class="card-text card-text-area">
+   
+// const [title, setTitle] = useState("")
+//  const changeHandler = (e) =>{setTitle(e.target.value)};
+// //    window.handleInputChange = (e) =>{
+// //     setTitle(e.target.value)
+// //     }
+
+//     let output = `<div class="card create-card">
+//             <div class="card-image"></div>
+//           <div class="card-text card-text-area">
               
-              <h2>Create new spot</h2>
-              <form>
-              <label>Spot title</label>
-              <input 
-              type="text" 
-              required>
-              </input>
-              <br>
-              <label>Description</label>
-              <textarea 
-              required>
-              </textarea>
-              <br>
-              <label>Choose City the spot belongs to</label>
-              <br>
-              <select>
-                <option value="Stockholm">Stockholm</option>
-                <option value="Göteborg">Göteborg</option>
-                <option value="Malmö">Malmö</option>
-              </select>
-              <button>Add card</button>
-          </div>
-          <div className="card-stats"></div>
-          </div>`;
+//               <h2>Create new spot</h2>
+//               <form>
+//               <label>Spot title</label>
+//               <input
+//               required
+//               value="${title}"
+//               onChange="${changeHandler}"
+//               type="text" 
+//               >
+//               </input>
+//               <br>
+//               <label>Description</label>
+//               <textarea 
+//               required>
+//               </textarea>
+//               <br>
+//               <label>Choose city the spot belongs to</label>
+//               <br>
+//               <select>
+//                 <option value="Stockholm">Stockholm</option>
+//                 <option value="Göteborg">Göteborg</option>
+//                 <option value="Malmö">Malmö</option>
+//               </select>
+//               <button>Add card</button>
+//               <p>${ title }</p>
+//           </div>
+//           <div className="card-stats"></div>
+//           </div>`;
     
 return(
     <>
     
-
-          
          {arr.forEach(spot => {
             //  console.log(spot)
+            
              output +=`
        <div class="card">
             <div class="card-image" style="background: url(${spot.image})"></div>
@@ -81,8 +92,6 @@ return(
     </>
     
 )
- 
-
  
 }
 

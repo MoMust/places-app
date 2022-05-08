@@ -13,6 +13,17 @@
       "cityRefId": 1
     },
     {
+      "name": "Stockholmspsrken2",
+      "description": "Some text",
+      "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650805313/medium_image_78fddc1aaf.jpg",
+      "cityRefId": 1
+    },
+    {
+      "name": "Göteborgsparken",
+      "description": "Some text",
+      "cityRefId": 2
+    },
+    {
       "name": "Göteborgsparken",
       "description": "Some text",
       "cityRefId": 2
@@ -29,6 +40,11 @@
     },
     {
       "name": "MAlmöparken2",
+      "description": "Some text",
+      "cityRefId": 3
+    },
+    {
+      "name": "Malmöparken",
       "description": "Some text",
       "cityRefId": 3
     }

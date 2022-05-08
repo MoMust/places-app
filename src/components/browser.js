@@ -18,7 +18,8 @@ function Browser() {
       <div className='loading-wrapper'>
          <div className="loading">Loading...</div>
       </div>}
-    <div id='body'>{data && <CityList cities={data}/>}
+  
+    <div id='body'>{data &&  <CityList cities={data}/>}
      
     </div>
     </>
