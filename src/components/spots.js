@@ -14,7 +14,8 @@ function Spots({spots}) {
     let cityData = spots[0].data;
     let arr = [];
     let output = '';
-    
+    console.log('cityData')
+    console.log(cityData)
     //Chek if cityKey matches spots reference key
     for (let i = 0; i < cityData.length; i++) {
 
