@@ -2,13 +2,13 @@
 import '../css/browser.css';
 import '../css/front.css';
 import Spots from './spots';
-import useFetchSpot from './fetchSpots';
+import useFetch from './fetchData';
 import Nav from './nav';
 import CreateCard from './createCard'
 //This is browser page 
 function Places() {
  
- const {data, isLoading} = useFetchSpot(`http://localhost:8000/spots`)
+ const {data, isLoading} = useFetch(`http://localhost:8000/spots`)
 
  
   return (

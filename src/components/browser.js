@@ -2,7 +2,7 @@
 import '../css/browser.css';
 import '../css/front.css';
 
-import useFetch from './fetchCities';
+import useFetch from './fetchData';
 import Nav from './nav';
 import CityList from './cities';
 
