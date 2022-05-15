@@ -12,8 +12,10 @@ function CityList({cities}) {
     if (!Array.isArray(cities)){
         cities = [cities];
     }
-    let data = cities[0].data;
+    let data = cities;
     let output = '';
+    console.log("cities")
+    console.log(cities);
     
 return(
     <>

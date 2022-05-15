@@ -11,7 +11,7 @@ function Spots({spots}) {
         spots = [spots];
     }
 
-    let cityData = spots[0].data;
+    let cityData = spots;
     let arr = [];
     let output = '';
     console.log('cityData')

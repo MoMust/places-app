@@ -1,5 +1,5 @@
 {
-  "data": [
+  "dataSpots": [
     {
       "name": "Stadshuset)",
       "description": "Nestled at the water's edge and topped by three golden crowns, the City Hall (Stockholms stadshus, or Stadshuset) is one of Stockholm's most iconic buildings and stars in countless images and postcards of the city. Dating from 1923, the hall opened on that most Swedish of dates Midsummer's Eve.",
@@ -47,6 +47,63 @@
       "name": "Malmöparken",
       "description": "Some text",
       "cityRefId": 3
+    },
+    {
+      "identifier": "momust",
+      "password": "Hejhej12",
+      "id": 3
+    },
+    {
+      "name": "eegrege",
+      "description": "rgehthg",
+      "cityRefId": "1",
+      "id": 4
+    },
+    {
+      "name": "defefrggrg",
+      "description": "sdgggdrg",
+      "cityRefId": "1",
+      "id": 5
+    }
+  ],
+  "dataCities": [
+    {
+      "name": "Stockholm",
+      "country": "Sweden",
+      "description": "Welcome to Stockholm, one of the world’s most beautiful capitals. Built on 14 islands around one of Europe’s largest and best-preserved mediaeval city centres, the city is stunningly located by the Baltic Sea.",
+      "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650805314/small_image_78fddc1aaf.jpg",
+      "cityId": 1
+    },
+    {
+      "name": "Göteborg",
+      "country": "Sweden",
+      "description": "Welcome to Göteborg, one of the world’s most beautiful capitals. Built on 14 islands around one of Europe’s largest and best-preserved mediaeval city centres, the city is stunningly located by the Baltic Sea.",
+      "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650806606/small_Goteborg_sparvagn_i_Stock_495376272_5c781b5bbf.jpg",
+      "cityId": 2
+    },
+    {
+      "name": "Malmö",
+      "country": "Sweden",
+      "description": "Welcome to Malmö, one of the world’s most beautiful capitals. Built on 14 islands around one of Europe’s largest and best-preserved mediaeval city centres, the city is stunningly located by the Baltic Sea.",
+      "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650806235/small_Malmoe_e1638117230291_3505397693.jpg",
+      "cityId": 3
+    },
+    {
+      "name": "Västerås",
+      "country": "Sweden",
+      "description": "Welcome to Västerås, one of the world’s most beautiful capitals. Built on 14 islands around one of Europe’s largest and best-preserved mediaeval city centres, the city is stunningly located by the Baltic Sea.",
+      "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650806235/small_Malmoe_e1638117230291_3505397693.jpg",
+      "cityId": 4
+    },
+    {
+      "identifier": "momust",
+      "password": "Hejhej12",
+      "id": 2
+    },
+    {
+      "identifier": "momust",
+      "password": "Hejhej12",
+      "id": 3
     }
   ]
 }

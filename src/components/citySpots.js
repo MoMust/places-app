@@ -8,7 +8,7 @@ import CreateCard from './createCard'
 //This is browser page 
 function Places() {
  
- const {data, isLoading} = useFetch(`http://localhost:8000/spots`)
+ const {data, isLoading} = useFetch(`http://localhost:8000/dataSpots`)
 
  
   return (

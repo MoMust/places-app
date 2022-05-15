@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "npx json-server --watch src/db.js --port 8000"
+    "server": "npx json-server --watch src/spotsDb.json --port 8000"
   },
   "eslintConfig": {
     "extends": [

@@ -9,7 +9,7 @@ import CityList from './cities';
 //This is browser page 
 function Browser() {
  
- const {data, isLoading} = useFetch(`http://localhost:8000/cities`)
+ const {data, isLoading} = useFetch(`http://localhost:8000/dataCities`)
  
   return (
     <>
