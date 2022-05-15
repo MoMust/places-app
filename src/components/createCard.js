@@ -1,9 +1,9 @@
-import { useState } from "react"
-
+import { useState, useEffect } from "react"
+import api from './Axios'
 // import Nav from './nav';
 
 // Get saved city object id from browser page and save in variabel
-let cityKey = localStorage.getItem('objId');
+// let cityKey = localStorage.getItem('objId');
 function createCard() {
 
 const [name, setName] = useState("")
@@ -12,19 +12,33 @@ const [description, setDescription] = useState("")
 let cityRefId = cityKey
 
  
- const handleChange = (e)=>{
-  e.preventDefault();
-  const card = {name, description, cityRefId}
-  console.log(card);
-  console.log(cityKey)
+ const handleChange = async (e)=>{
+  // e.preventDefault();
+  // const card = {name, description, cityRefId}
+  // console.log(card);
+  // console.log(cityKey)
  
-  fetch(`http://localhost:8000/spots`, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(card)
-  }).then(() =>{
-    console.log('New spot added')
-  })
+  // fetch(`http://localhost:8000/spots`, {
+  //   method: 'POST',
+  //   headers: {'Content-Type': 'application/json'},
+  //   body: JSON.stringify(card)
+  // }).then(() =>{
+  //   console.log('New spot added')
+  // })
+
+ const getSpots = async ()=>{
+   const response = await api.get("/Axios");
+   return response.data;
+ }
+
+  useEffect(()=>{
+    const getAllSpots = ()=>{
+
+    }
+  }, [])
+  const card = {name, description, cityRefId}
+
+  const response = await api.post("/Axios", card)
   
 }
 
@@ -56,13 +70,7 @@ let cityRefId = cityKey
               <br></br>
               <label>Choose city the spot belongs to</label>
               <br></br>
-              {/* <select
-              value= {city}
-              onChange={(e) => setCity(e.target.value)}>
-                <option value="Stockholm">Stockholm</option>
-                <option value="Göteborg">Göteborg</option>
-                <option value="Malmö">Malmö</option>
-              </select> */}
+              
               <button >Add card</button>
               <p>{ name }</p>
               <p>{ description }</p>
