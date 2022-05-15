@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react"
-import api from './Axios'
+import { useState} from "react"
+
 // import Nav from './nav';
 
 // Get saved city object id from browser page and save in variabel
-// let cityKey = localStorage.getItem('objId');
+let cityKey = localStorage.getItem('objId');
 function createCard() {
 
 const [name, setName] = useState("")
@@ -13,34 +13,22 @@ let cityRefId = cityKey
 
  
  const handleChange = async (e)=>{
-  // e.preventDefault();
-  // const card = {name, description, cityRefId}
-  // console.log(card);
-  // console.log(cityKey)
- 
-  // fetch(`http://localhost:8000/spots`, {
-  //   method: 'POST',
-  //   headers: {'Content-Type': 'application/json'},
-  //   body: JSON.stringify(card)
-  // }).then(() =>{
-  //   console.log('New spot added')
-  // })
-
- const getSpots = async ()=>{
-   const response = await api.get("/Axios");
-   return response.data;
- }
-
-  useEffect(()=>{
-    const getAllSpots = ()=>{
-
-    }
-  }, [])
+  e.preventDefault();
   const card = {name, description, cityRefId}
+  console.log(card);
+  console.log(cityKey)
+ 
+  fetch(`http://localhost:8000/spots`, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(card)
+  }).then(() =>{
+    console.log('New spot added')
+  })
 
-  const response = await api.post("/Axios", card)
-  
 }
+
+
 
 
   return (
@@ -78,7 +66,7 @@ let cityRefId = cityKey
               </form>
           </div>
     </div>
-          
+         
   )
   }
 
