@@ -1,7 +1,7 @@
 // import Create from './create'
 // import { useState } from "react"
 
-// Get saved city object id from browser page and save in variabel
+// Get saved city id from browser page and save in variabel
 let cityKey = localStorage.getItem('objId');
 //Function/component - To get spots in each city
 function Spots({spots}) {
@@ -16,57 +16,20 @@ function Spots({spots}) {
     let output = '';
     console.log('cityData')
     console.log(cityData)
+    //To get spots related to city
     //Chek if cityKey matches spots reference key
     for (let i = 0; i < cityData.length; i++) {
 
         //Key do not match
         if(cityKey != cityData[i].cityRefId){
             // console.log('no match')
+
            //Key matches, create an array with matching objects 
         }else{arr.push(cityData[i]);
             console.log(arr);}
     
     }
 
-   
-// const [title, setTitle] = useState("")
-//  const changeHandler = (e) =>{setTitle(e.target.value)};
-// //    window.handleInputChange = (e) =>{
-// //     setTitle(e.target.value)
-// //     }
-
-//     let output = `<div class="card create-card">
-//             <div class="card-image"></div>
-//           <div class="card-text card-text-area">
-              
-//               <h2>Create new spot</h2>
-//               <form>
-//               <label>Spot title</label>
-//               <input
-//               required
-//               value="${title}"
-//               onChange="${changeHandler}"
-//               type="text" 
-//               >
-//               </input>
-//               <br>
-//               <label>Description</label>
-//               <textarea 
-//               required>
-//               </textarea>
-//               <br>
-//               <label>Choose city the spot belongs to</label>
-//               <br>
-//               <select>
-//                 <option value="Stockholm">Stockholm</option>
-//                 <option value="Göteborg">Göteborg</option>
-//                 <option value="Malmö">Malmö</option>
-//               </select>
-//               <button>Add card</button>
-//               <p>${ title }</p>
-//           </div>
-//           <div className="card-stats"></div>
-//           </div>`;
     
 return(
     <>

@@ -25,9 +25,6 @@ function Front() {
         </div>
     </header>
      <div className='background'>
-      <div>
-        <p>Some text</p>
-      </div>
      </div>
      <div>
        

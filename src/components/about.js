@@ -1,5 +1,5 @@
 import Nav from './nav';
-
+//Informational page
 function About() {
   return (
    

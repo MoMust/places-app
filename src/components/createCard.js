@@ -1,22 +1,21 @@
 import { useState} from "react"
 
-// import Nav from './nav';
-
 // Get saved city object id from browser page and save in variabel
 let cityKey = localStorage.getItem('objId');
 function createCard() {
-
+//Set state based on what user inputs
 const [name, setName] = useState("")
 const [description, setDescription] = useState("")
 // const [city, setCity] = useState("Stockholm")
 let cityRefId = cityKey
 
- 
+ //On submit make a POST request with info provided from user
  const handleChange = async (e)=>{
+   //Prevent form from clearing input fields
   e.preventDefault();
   const card = {name, description, cityRefId}
-  console.log(card);
-  console.log(cityKey)
+  // console.log(card);
+  // console.log(cityKey)
  
   fetch(`http://localhost:8000/dataSpots`, {
     method: 'POST',
@@ -27,9 +26,6 @@ let cityRefId = cityKey
   })
 
 }
-
-
-
 
   return (
 
@@ -62,7 +58,6 @@ let cityRefId = cityKey
               <button >Add card</button>
               <p>{ name }</p>
               <p>{ description }</p>
-              {/* <p>{ city }</p> */}
               </form>
           </div>
     </div>
