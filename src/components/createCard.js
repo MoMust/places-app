@@ -23,6 +23,7 @@ let cityRefId = cityKey
     body: JSON.stringify(card)
   }).then(() =>{
     console.log('New spot added')
+    location.reload();
   })
 
 }

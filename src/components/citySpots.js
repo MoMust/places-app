@@ -4,11 +4,12 @@ import Spots from './spots';
 import useFetch from './useFetch';
 import Nav from './nav';
 import CreateCard from './createCard'
+
 //This is places page 
 function Places() {
   //Run useFetch function, return data from db and is loading state, 
  const {data, isLoading} = useFetch(`http://localhost:8000/dataSpots`)
-
+ 
  
   return (
     <>

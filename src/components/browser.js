@@ -20,7 +20,7 @@ function Browser() {
          <div className="loading">Loading...</div>
       </div>}
       {/* Get data and pass to CityList component */}
-    <div id='body'>{data &&  <CityList cities={data}/>}
+    <div id='body'>{data && <CityList cities={data}/>}
      
     </div>
     </>

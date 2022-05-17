@@ -16,6 +16,7 @@ function Front() {
             <div className='nav-wrapper col-12'>
                 <nav className="nav-bar">
                     <ul>
+                      {/* Navigation */}
                        <NavLink exact to="/" className='nav-items'>Home</NavLink>
                         <NavLink to="/Browser" className='nav-items'>Browser</NavLink>
                         <NavLink to="/About" className='nav-items'>About</NavLink>

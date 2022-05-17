@@ -1,6 +1,7 @@
 // import Create from './create'
 // import { useState } from "react"
 
+
 // Get saved city id from browser page and save in variabel
 let cityKey = localStorage.getItem('objId');
 //Function/component - To get spots in each city
@@ -19,18 +20,29 @@ function Spots({spots}) {
     //To get spots related to city
     //Chek if cityKey matches spots reference key
     for (let i = 0; i < cityData.length; i++) {
-
+       
         //Key do not match
         if(cityKey != cityData[i].cityRefId){
             // console.log('no match')
 
            //Key matches, create an array with matching objects 
         }else{arr.push(cityData[i]);
-            console.log(arr);}
+            // console.log(arr);
+        }
     
     }
-
+    for (let i = 0; i < cityData.length; i++) {
+        // console.log(cityData[i].id)
+        
+    }
     
+   window.handleClick = (id) =>{
+    fetch('http://localhost:8000/dataSpots/' + id, {
+      method: 'DELETE'
+    }).then(() =>{
+        location.reload();
+    })
+  }
 return(
     <>
     
@@ -41,13 +53,18 @@ return(
        <div class="card">
             <div class="card-image" style="background: url(${spot.image})"></div>
           <div class="card-text">
-              <span class="date">4 days</span>
+              <span class="date">5 days</span>
+              
               <h2>${spot.name}</h2>
               <p>${spot.description}</p>
+              <button id="btn" onclick="handleClick(${spot.id})">Delete</button>
+              
           </div>
+          
           <div class="card-stats"></div>
+          
           </div>`;
-             
+
           document.getElementById('body').innerHTML = output;
          })}
         
