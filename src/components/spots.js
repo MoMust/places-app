@@ -37,7 +37,7 @@ function Spots({spots, card}) {
         
     }
 
-    
+    //Make DELETE of card when delete button is clicked
    window.handleClickDel = (id) =>{
        if(window.confirm('Are you sure that you want to delete this card?')){
         fetch('http://localhost:8000/dataSpots/' + id, {
@@ -48,6 +48,7 @@ function Spots({spots, card}) {
        }
     
   }
+  //Make an update of card when update button is clicked
    window.handleClickUpd = (id)=>{
     fetch(`http://localhost:8000/dataSpots/` + id, {
     method: 'PUT',

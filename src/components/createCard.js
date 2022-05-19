@@ -8,6 +8,7 @@ const [name, setName] = useState("")
 const [description, setDescription] = useState("")
 // const [city, setCity] = useState("Stockholm")
 let cityRefId = cityKey
+//Set state from inputs when updating card in Spots componenet
 setCard(name, description, cityKey)
  //On submit make a POST request with info provided from user
  const handleChange = async (e)=>{
@@ -17,7 +18,7 @@ setCard(name, description, cityKey)
   
   // console.log(card);
   // console.log(cityKey)
- 
+ // Make a post of new card
   fetch(`http://localhost:8000/dataSpots`, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},

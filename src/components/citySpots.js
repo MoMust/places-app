@@ -9,12 +9,13 @@ import { useState } from "react"
 function citySpots() {
   //Run useFetch function, return data from db and is loading state, 
  const {data, isLoading} = useFetch(`http://localhost:8000/dataSpots`)
+ //Set state for updating card from createCard to spots
  const [card, setCard] = useState('')
   return (
     <>
     {/* Call nav componenet */}
     <Nav />
-    {/* Call createCard componenet - for creating new custom card */}
+    {/* Call createCard componenet - for creating new custom card - Set state of input to update in Spots componenet*/}
     {<CreateCard setCard={setCard}/>}
     {/* If data fetched is not showing, show is loading message state */}
      {isLoading &&
@@ -23,7 +24,7 @@ function citySpots() {
       </div>}
       
     <div id='body'>
-      {/* Get data and pass to Spots component */}
+      {/* Get data and pass to Spots component - Get state of card to update card */}
       {data &&<Spots spots={data} card={card}/>}
 
       <div id="myModal" className="modal">
