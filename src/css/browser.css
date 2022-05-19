@@ -3,7 +3,7 @@
 
 #body {
     width: 100vw;
-    height: 100%;
+    height: 150vh;
     display: flex;
     background-color: grey;
     align-items: center;
