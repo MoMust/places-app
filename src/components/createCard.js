@@ -2,14 +2,15 @@ import { useState} from "react"
 
 // Get saved city object id from browser page and save in variabel
 let cityKey = localStorage.getItem('objId');
-function createCard({setCard}) {
+function createCard({setCardName, setCardDescription}) {
 //Set state based on what user inputs
 const [name, setName] = useState("")
 const [description, setDescription] = useState("")
 // const [city, setCity] = useState("Stockholm")
 let cityRefId = cityKey
 //Set state from inputs when updating card in Spots componenet
-setCard(name, description, cityKey)
+setCardName(name)
+setCardDescription(description, cityKey)
  //On submit make a POST request with info provided from user
  const handleChange = async (e)=>{
    //Prevent form from clearing input fields

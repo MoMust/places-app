@@ -10,13 +10,14 @@ function citySpots() {
   //Run useFetch function, return data from db and is loading state, 
  const {data, isLoading} = useFetch(`http://localhost:8000/dataSpots`)
  //Set state for updating card from createCard to spots
- const [card, setCard] = useState('')
+ const [cardName, setCardName] = useState('')
+ const [cardDescription, setCardDescription] = useState('')
   return (
     <>
     {/* Call nav componenet */}
     <Nav />
     {/* Call createCard componenet - for creating new custom card - Set state of input to update in Spots componenet*/}
-    {<CreateCard setCard={setCard}/>}
+    {<CreateCard setCardName={setCardName} setCardDescription={setCardDescription}/>}
     {/* If data fetched is not showing, show is loading message state */}
      {isLoading &&
       <div className='loading-wrapper'>
@@ -25,7 +26,7 @@ function citySpots() {
       
     <div id='body'>
       {/* Get data and pass to Spots component - Get state of card to update card */}
-      {data &&<Spots spots={data} card={card}/>}
+      {data &&<Spots spots={data} cardName={cardName} cardDescription={cardDescription}/>}
 
       <div id="myModal" className="modal">
 

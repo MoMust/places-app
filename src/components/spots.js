@@ -5,7 +5,7 @@
 // Get saved city id from browser page and save in variabel
 let cityKey = localStorage.getItem('objId');
 //Function/component - To get spots in each city
-function Spots({spots, card}) {
+function Spots({spots, cardName, cardDescription}) {
     
     //Check if its not an array if so set prop to a singel element array. (For singel objects)
     if (!Array.isArray(spots)){
@@ -17,7 +17,6 @@ function Spots({spots, card}) {
     let output = '';
     console.log('cityData')
     console.log(cityData)
-    console.log(card)
     //To get spots related to city
     //Chek if cityKey matches spots reference key
     for (let i = 0; i < cityData.length; i++) {
@@ -53,7 +52,7 @@ function Spots({spots, card}) {
     fetch(`http://localhost:8000/dataSpots/` + id, {
     method: 'PUT',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({name: card, description: card, cityRefId:cityKey})
+    body: JSON.stringify({name: cardName, description: cardDescription, cityRefId: cityKey})
   }).then(() =>{
     console.log('Spot updated')
     location.reload();

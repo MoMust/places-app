@@ -63,22 +63,20 @@
       "id": 10
     },
     {
-      "name": "jjjjjjjjjjjjjjj",
-      "description": "jjjjjjjjjjjjjjj",
-      "cityKey": "1",
-      "id": 11
+      "name": "ggggggggggggg",
+      "description": "",
+      "id": 14
     },
     {
-      "name": "bbbbbbbbbbbb",
-      "description": "bbbbbbbbbbbb",
+      "name": "kkkkkkkkkkkkkkkk",
+      "description": "pppppppppppppppp",
+      "id": 15
+    },
+    {
+      "name": "aaaaaaaaaaaaa",
+      "description": "ssssssssssssssssss",
       "cityRefId": "1",
-      "id": 12
-    },
-    {
-      "name": "lllllllllll",
-      "description": "lllllllllll",
-      "cityRefId": "2",
-      "id": 13
+      "id": 16
     }
   ],
   "dataCities": [
