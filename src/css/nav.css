@@ -6,11 +6,6 @@
     box-sizing: border-box;
 }
 
-/* .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-} */
 .header {
     display: flex;
     justify-content: center;

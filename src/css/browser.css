@@ -2,16 +2,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
 
 #body {
-    width: 100vw;
-    height: 150vh;
     display: flex;
     background-color: grey;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    gap:5%;
+    gap:0% 5%;
     display:grid;
     grid-template-columns: auto auto auto;
+}
+
+#search-wrapper{
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    
+}
+
+#search-container {
+    display:flex;
+    justify-content: center;
+    
+    width: 600px;
+    height: 100px;
+    background-color: rgb(216, 215, 215);
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+#search-container > input, #btn-search{
+    height: 30%;
+    border: none;
+}
+
+#search-container > input{
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+ #btn-search{
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+ }
+
+
+#body a{
+    text-decoration: none;
 }
 
 .loading-wrapper{
@@ -26,14 +67,15 @@
 .card{
     display:grid;
     grid-template-columns: 400px;
-    grid-template-rows: 250px 250px 100px;
+    grid-template-rows: 250px 280px 100px;
     grid-template-areas: "image" "text" "stats";
     border: none;
     border-radius: 18px;
     background:rgba(255, 254, 254, 0.843);
-    filter: brightness(50%);
+    filter: brightness(70%);
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 .card:hover{
     transition: 0.9s;
@@ -54,8 +96,9 @@
     grid-area: text;
     font-family: rajdhani;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 20px;
 }
+
 .card-stats{
     grid-area: stats;
 }

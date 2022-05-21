@@ -107,16 +107,6 @@
       "description": "Welcome to Västerås, one of the world’s most beautiful capitals. Built on 14 islands around one of Europe’s largest and best-preserved mediaeval city centres, the city is stunningly located by the Baltic Sea.",
       "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650806235/small_Malmoe_e1638117230291_3505397693.jpg",
       "cityId": 4
-    },
-    {
-      "identifier": "momust",
-      "password": "Hejhej12",
-      "id": 2
-    },
-    {
-      "identifier": "momust",
-      "password": "Hejhej12",
-      "id": 3
     }
   ]
 }
