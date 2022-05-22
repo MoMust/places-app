@@ -16,7 +16,7 @@ function Browser() {
     for (let i = 0; i < data.length; i++) {
       let element = data[i];
       //If input matches
-      if (element.name == userInput) {
+      if (element.name.toUpperCase() == userInput.toUpperCase()) {
         localStorage.setItem("objId", element.cityId);
         let path = `../citySpots`;
 
@@ -29,7 +29,7 @@ function Browser() {
         console.log("Cannot find what you are looking");
         document.getElementById(
           "body"
-        ).innerHTML = `<div class="loading">Cannot find what you are looking</div>`;
+        ).innerHTML = `<div class="mismatch">Cannot find what you are looking for</div>`;
       }
     }
     // console.log(userInput)
@@ -44,7 +44,9 @@ function Browser() {
       <div id="search-wrapper">
         <div id="search-container">
           <input placeholder="Search" type="text" id="search"></input>
-          <button id="btn-search" onClick={clickHandler}>Search</button>
+          <button id="btn-search" onClick={clickHandler}>
+            Search
+          </button>
         </div>
       </div>
 
@@ -55,7 +57,11 @@ function Browser() {
         </div>
       )}
       {/* Get data and pass to CityList component */}
-      <div id="body">{data && <CityList cities={data} />}</div>
+      <div id="body">
+        {data && <CityList cities={data} />}
+        
+        
+        </div>
     </>
   );
 }
