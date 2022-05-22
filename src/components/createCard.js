@@ -32,41 +32,38 @@ setCardDescription(description, cityKey)
 }
 
   return (
+    <div className="card create-card">
+      <div className="card-image"></div>
+      <div className="card-text card-text-area">
+        <h2>Create new spot</h2>
+        <form onSubmit={handleChange}>
+          <label>Spot title</label>
+          <input
+            placeholder="Type title here.."
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            type="text"
+          ></input>
+          <br></br>
+          <label>Description</label>
+          <textarea
+            placeholder="Type description here.."
+            required
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            type="text"
+          ></textarea>
+        
+          <br></br>
 
-   <div className="card create-card">
-            <div className="card-image"></div>
-          <div className="card-text card-text-area">
-              
-              <h2>Create new spot</h2>
-              <form onSubmit={handleChange}>
-              <label>Spot title</label>
-              <input
-              required
-              value={name}
-              onChange={(e) =>setName(e.target.value)}
-              type="text" 
-              >
-              </input>
-              <br></br>
-              <label>Description</label>
-              <textarea 
-               required
-              value={description}
-              onChange={(e) =>setDescription(e.target.value)}
-              type="text" >
-              </textarea>
-              <br></br>
-              <label>Choose city the spot belongs to</label>
-              <br></br>
-              
-              <button >Add card</button>
-              <p>{ name }</p>
-              <p>{ description }</p>
-              </form>
-          </div>
+          <button>Add card</button>
+          <p>{name}</p>
+          <p>{description}</p>
+        </form>
+      </div>
     </div>
-         
-  )
+  );
   }
 
 export default createCard

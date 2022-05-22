@@ -28,7 +28,7 @@ function Browser() {
       } else {
         console.log("Cannot find what you are looking");
         document.getElementById(
-          "body"
+          "render-objects"
         ).innerHTML = `<div class="mismatch">Cannot find what you are looking for</div>`;
       }
     }
@@ -39,17 +39,6 @@ function Browser() {
   // console.log(data)
   return (
     <>
-      {/* Call nav componenet */}
-      <Nav />
-      <div id="search-wrapper">
-        <div id="search-container">
-          <input placeholder="Search" type="text" id="search"></input>
-          <button id="btn-search" onClick={clickHandler}>
-            Search
-          </button>
-        </div>
-      </div>
-
       {/* If data fetched is not showing, show is loading message state */}
       {isLoading && (
         <div className="loading-wrapper">
@@ -57,11 +46,23 @@ function Browser() {
         </div>
       )}
       {/* Get data and pass to CityList component */}
+      {data && <CityList cities={data} />}
+      {/* Main body rendering */}
       <div id="body">
-        {data && <CityList cities={data} />}
-        
-        
+        {/* Call nav componenet */}
+        <Nav />
+        {/*  */}
+        <div id="search-wrapper">
+          <div id="search-container">
+            <input placeholder="Search" type="text" id="search"></input>
+            <button id="btn-search" onClick={clickHandler}>
+              Search
+            </button>
+          </div>
         </div>
+        {/* Rendering objects*/}
+        <div id="render-objects"></div>
+      </div>
     </>
   );
 }

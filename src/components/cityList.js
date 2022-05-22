@@ -45,7 +45,7 @@ function CityList({cities}) {
           </div></a>`;
             
           //  Output all objects to body div in browser componentpåpå
-            document.getElementById('body').innerHTML = output
+            document.getElementById('render-objects').innerHTML = output;
          
                 })
              
@@ -64,7 +64,7 @@ function CityList({cities}) {
           <div class="card-stats"></div>
           </div></a>`;
 
-          document.getElementById('body').innerHTML = output
+          document.getElementById('render-objects').innerHTML = output;
         }
         
     
