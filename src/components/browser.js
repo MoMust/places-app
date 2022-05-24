@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "../css/browser.css";
-import "../css/front.css";
+
 import useFetch from "./useFetch";
 import Nav from "./nav";
 import CityList from "./cityList";

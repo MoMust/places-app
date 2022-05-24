@@ -116,10 +116,6 @@
     font-size: 20px;
 }
 
-/* .card-stats {
-    grid-area: stats;
-} */
-
 .create-card {
     display: grid;
     grid-template-columns: 400px;
