@@ -15,8 +15,8 @@ function Spots({spots, cardName, cardDescription}) {
     let cityData = spots;
     let arr = [];
     let output = '';
-    console.log('cityData')
-    console.log(cityData)
+    // console.log('cityData')
+    // console.log(cityData)
     //To get spots related to city
     //Chek if cityKey matches spots reference key
     for (let i = 0; i < cityData.length; i++) {

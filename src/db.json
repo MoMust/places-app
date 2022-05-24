@@ -2,7 +2,7 @@
   "dataSpots": [
     {
       "id": 1,
-      "name": "Stadshuset)",
+      "name": "Stadshuset",
       "description": "Nestled at the water's edge and topped by three golden crowns, the City Hall (Stockholms stadshus, or Stadshuset) is one of Stockholm's most iconic buildings and stars in countless images and postcards of the city. Dating from 1923, the hall opened on that most Swedish of dates Midsummer's Eve.",
       "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_scale,w_410/v1652264222/project-places/stadshuset_fkgwqv.jpg",
       "cityRefId": 1
@@ -17,7 +17,7 @@
     {
       "id": 3,
       "name": "Djurgården",
-      "description": "A tranquil oasis in the heart of the city, the island of Djurgården draws crowds of tourists and locals alike, particularly during the summer months of long lazy days and short nights. The park forms part of the Royal National City Park, and it's a perfect place for a stroll and picnic, as well as being home to several of Stockholm's top museums and other attractions.",
+      "description": "A tranquil oasis in the heart of the city, the island of Djurgården draws crowds of tourists and locals alike, particularly during the summer months of long lazy days and short nights. The park forms part of the Royal National City Park, and being home to several of Stockholm's top museums and other attractions.",
       "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_scale,w_440/v1652262366/project-places/kungliga-djurgarden-english_o6yc3t.jpg",
       "cityRefId": 1
     },
@@ -47,13 +47,13 @@
     },
     {
       "id": 8,
-      "name": "MAlmöparken2",
+      "name": "Malmöparken2",
       "description": "Some text",
       "cityRefId": 3
     },
     {
       "id": 9,
-      "name": "Malmöparken",
+      "name": "Malmöparken3",
       "description": "Some text",
       "cityRefId": 3
     },
@@ -73,10 +73,16 @@
       "id": 15
     },
     {
-      "name": "updated",
-      "description": "updated",
+      "name": "djsnjsdnfjdsfnsdnfsd",
+      "description": "A tranquil oasis in the heart of the city, the island of Djurgården draws crowds of tourists and locals alike, particularly during the summer months of long lazy days and short nights. The park forms part of the Royal National City Park, and being home to several of Stockholm's top museums and other attractions.",
       "cityRefId": "1",
       "id": 16
+    },
+    {
+      "name": "ggggggggggg",
+      "description": "fffffffffffff",
+      "cityRefId": "1",
+      "id": 17
     }
   ],
   "dataCities": [

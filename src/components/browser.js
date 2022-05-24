@@ -15,8 +15,9 @@ function Browser() {
     //Checks user input and displays correct spots
     for (let i = 0; i < data.length; i++) {
       let element = data[i];
-      //If input matches
+      //If input matches show spots
       if (element.name.toUpperCase() == userInput.toUpperCase()) {
+        //Save city id to localstorage
         localStorage.setItem("objId", element.cityId);
         let path = `../citySpots`;
 
@@ -25,6 +26,7 @@ function Browser() {
 
         console.log(element);
         console.log(element.cityId);
+        //If input do not match send message
       } else {
         console.log("Cannot find what you are looking");
         document.getElementById(
@@ -32,6 +34,7 @@ function Browser() {
         ).innerHTML = `<div class="mismatch">Cannot find what you are looking for</div>`;
       }
     }
+    // console.log('userInput')
     // console.log(userInput)
   }
 
@@ -40,18 +43,15 @@ function Browser() {
   return (
     <>
       {/* If data fetched is not showing, show is loading message state */}
-      {isLoading && (
-        <div className="loading-wrapper">
-          <div className="loading">Loading...</div>
-        </div>
-      )}
+
       {/* Get data and pass to CityList component */}
       {data && <CityList cities={data} />}
       {/* Main body rendering */}
       <div id="body">
         {/* Call nav componenet */}
         <Nav />
-        {/*  */}
+        
+        {/* Search */}
         <div id="search-wrapper">
           <div id="search-container">
             <input placeholder="Search" type="text" id="search"></input>
@@ -60,6 +60,11 @@ function Browser() {
             </button>
           </div>
         </div>
+        {isLoading && (
+          <div className="loading-wrapper">
+            <div className="loading">Loading...</div>
+          </div>
+        )}
         {/* Rendering objects*/}
         <div id="render-objects"></div>
       </div>

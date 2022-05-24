@@ -37,29 +37,39 @@ setCardDescription(description, cityKey)
       <div className="card-text card-text-area">
         <h2>Create new spot</h2>
         <form onSubmit={handleChange}>
-          <label>Spot title</label>
+          <label>
+            Spot title{" "}
+            <span style={{ fontStyle: "italic", fontSize: "15px" }}>
+              (max 20 char)
+            </span>
+          </label>
           <input
-            placeholder="Type title here.."
+            placeholder="Type title here..."
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
             type="text"
+            maxLength="20"
           ></input>
           <br></br>
-          <label>Description</label>
+          <label>
+            Description{" "}
+            <span style={{ fontStyle: "italic", fontSize: "15px" }}>
+              (max 313 char)
+            </span>
+          </label>
           <textarea
-            placeholder="Type description here.."
+            placeholder="Type description here..."
             required
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             type="text"
+            maxLength="313"
           ></textarea>
-        
+
           <br></br>
 
           <button>Add card</button>
-          <p>{name}</p>
-          <p>{description}</p>
         </form>
       </div>
     </div>

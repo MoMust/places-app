@@ -13,13 +13,13 @@ function Front() {
                     <p>Travel Places</p>
                 </div>
             </div>
-            <div className='nav-wrapper col-12'>
+            <div className='nav-wrapper col-6'>
                 <nav className="nav-bar">
                     <ul>
                       {/* Navigation */}
                        <NavLink exact to="/" className='nav-items'>Home</NavLink>
                         <NavLink to="/Browser" className='nav-items'>Browser</NavLink>
-                        <NavLink to="/About" className='nav-items'>About</NavLink>
+                        
                     </ul>
                 </nav>
             </div>
@@ -28,7 +28,7 @@ function Front() {
      <div className='background'>
      </div>
      <div>
-       
+       <p>Hello</p>
      </div>
     </div>
   );
