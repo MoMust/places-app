@@ -29,7 +29,6 @@
       "cityId": 4
     }
   ],
-
   "dataSpots": [
     {
       "id": 1,
@@ -103,12 +102,6 @@
       "description": "A tranquil oasis in the heart of the city, the island of Djurgården draws crowds of tourists and locals alike, particularly during the summer months of long lazy days and short nights. The park forms part of the Royal National City Park, and being home to several of Stockholm's top museums and other attractions.",
       "cityRefId": "1",
       "id": 12
-    },
-    {
-      "name": "ggggggggggg",
-      "description": "fffffffffffff",
-      "cityRefId": "1",
-      "id": 13
     }
   ]
 }
