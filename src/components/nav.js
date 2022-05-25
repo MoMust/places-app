@@ -9,7 +9,7 @@ function Nav() {
 
   return (
     <header className="header">
-      <div className="row">
+      <div className="row row-nav">
         <div className="icon-wrapper col-12">
           <img className="logo-image" src={logo}></img>
           <div className="icon-text">

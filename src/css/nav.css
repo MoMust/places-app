@@ -22,10 +22,10 @@
     height: 180px;
 }
 
-.row {
+.row-nav {
     width: 50%;
     display: flex;
-        justify-content: center;
+    justify-content: center;
 }
 .nav-wrapper{
     height:45%;
