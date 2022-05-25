@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&family=Nanum+Gothic:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
 
+
 .background {
-    height: 100vh;
+
+min-height: 100vh;
+   
     background-image: url("../icons/travel-world-map7.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,7 +33,7 @@
 
 .header-title>h1 {
     display: flex;
-    
+
     justify-content: center;
     color: white;
     font-family: 'Barlow Condensed',
@@ -63,25 +66,24 @@
     font-size: 30px;
     padding: 5px;
     font-weight: 700;
-    
+
     font-family: 'Barlow Condensed',
         sans-serif;
-        background-color: grey;
-        border-radius: 30px;
-        padding: 20px;
+    background-color: grey;
+    border-radius: 30px;
+    padding: 20px;
 }
 
-/* .image-card {
-    background-image: url("../icons/front-image.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+.btn-front {
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+}
 
-} */
-
-/* .text-card {
-    color: white;
+.btn-front>button {
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
     font-size: 20px;
-    height: 13rem;
-    width: 300px;
-    font-weight: 600;
-} */
+
+}
