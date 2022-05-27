@@ -9,12 +9,15 @@ import CityList from "./cityList";
 function Browser() {
   //Run useFetch function, return data of db and is loading state,
   const { data, isLoading } = useFetch(`http://localhost:8000/dataCities`);
+
   let navigate = useNavigate();
+
   function clickHandler() {
     let userInput = document.getElementById("search").value;
     //Checks user input and displays correct spots
     for (let i = 0; i < data.length; i++) {
       let element = data[i];
+
       //If input matches show spots
       if (element.name.toUpperCase() == userInput.toUpperCase()) {
         //Save city id to localstorage
@@ -51,7 +54,7 @@ function Browser() {
         {/* Call nav componenet */}
         <Nav />
         
-        {/* Search */}
+        {/* Search JSX*/}
         <div id="search-wrapper">
           <div id="search-container">
             <input placeholder="Search" type="text" id="search"></input>

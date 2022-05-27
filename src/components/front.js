@@ -4,7 +4,6 @@ import Nav from './nav'
 function Front() {
   return (
     <>
-      
         <div className="background">
           <Nav />
           <div className="content">

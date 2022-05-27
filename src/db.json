@@ -53,20 +53,23 @@
     },
     {
       "id": 4,
-      "name": "Göteborgsparken",
-      "description": "Some text",
+      "name": "Gothenburg Museum of Art",
+      "description": "The prestigious museum opened in 1923, in time for Gothenburgs International Exhibition. You can come to appreciate works from across Europe painted from the 1400s to the 21st century.  But the museums acclaim comes from its 19th-century Nordic art",
+      "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_scale,w_410/v1653673734/Gothenburg-Museum-of-Art_tqdrsv.jpg",
       "cityRefId": 2
     },
     {
       "id": 5,
-      "name": "Göteborgsparken",
-      "description": "Some text",
+      "name": "Liseberg",
+      "description": "This thriving amusement park goes back to 1923 and draws big crowds today. Liseberg has a traditional character and abounds with greenery and woodland, but its lineup of high-tech rides is constantly evolving. The steel roller coaster Helix was unveiled in 2014 and the state -of-the-art Valkyria is in the pipeline for 2018.",
+      "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_scale,w_410/v1653674218/Liseberg_qqikpc.jpg",
       "cityRefId": 2
     },
     {
       "id": 6,
-      "name": "Göteborgsparken2",
-      "description": "Some text",
+      "name": "Gothenburg Archipelago",
+      "description": "Close to Gothenburg you can embark on a journey through the little granite islands of the Southern and Northern Gothenburg archipelago. You’ll catch a ferry from Saltholmen and can use that ticket to jump from island to island, calling in on painted fishing villages and old shipping settlements.",
+      "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_scale,w_410/v1653674379/Gothenburg-Archipelago_hmxb8r.jpg",
       "cityRefId": 2
     },
     {
