@@ -1,6 +1,13 @@
 {
   "dataCities": [
     {
+      "name": "Make your own spots",
+      "country": "Sweden",
+      "description": "Here you can create and save your own spots as you like",
+      "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650805314/small_image_78fddc1aaf.jpg",
+      "cityId": 0
+    },
+    {
       "name": "Stockholm",
       "country": "Sweden",
       "description": "Welcome to Stockholm, one of the world’s most beautiful capitals. Built on 14 islands around one of Europe’s largest and best-preserved mediaeval city centres, the city is stunningly located by the Baltic Sea.",
