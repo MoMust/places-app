@@ -1,10 +1,10 @@
 {
   "dataCities": [
     {
-      "name": "Make your own spots",
+      "name": "Your spots",
       "country": "Sweden",
-      "description": "Here you can create and save your own spots as you like",
-      "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650805314/small_image_78fddc1aaf.jpg",
+      "description": "Your special spots saves here",
+      "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_fit,w_202/v1653685815/creation-icon-20_byfbzv.png",
       "cityId": 0
     },
     {
@@ -112,6 +112,12 @@
       "description": "A tranquil oasis in the heart of the city, the island of Djurgården draws crowds of tourists and locals alike, particularly during the summer months of long lazy days and short nights. The park forms part of the Royal National City Park, and being home to several of Stockholm's top museums and other attractions.",
       "cityRefId": "1",
       "id": 12
+    },
+    {
+      "name": "efewfew",
+      "description": "egreger",
+      "cityRefId": "0",
+      "id": 13
     }
   ]
 }

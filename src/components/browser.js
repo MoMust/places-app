@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "../css/browser.css";
-
+import createImg from "../icons/creation-icon-20.jpg";
 import useFetch from "./useFetch";
 import Nav from "./nav";
 import CityList from "./cityList";
@@ -11,6 +11,12 @@ function Browser() {
   const { data, isLoading } = useFetch(`http://localhost:8000/dataCities`);
 
   let navigate = useNavigate();
+  let cityKey = "";
+  window.getInfo = (props) => {
+    cityKey = props;
+    localStorage.setItem("objId", cityKey);
+    console.log(cityKey);
+  };
 
   function clickHandler() {
     let userInput = document.getElementById("search").value;
@@ -53,16 +59,31 @@ function Browser() {
       <div id="body">
         {/* Call nav componenet */}
         <Nav />
-        
+
         {/* Search JSX*/}
-        <div id="search-wrapper">
+        {isLoading || <div id="search-wrapper">
           <div id="search-container">
             <input placeholder="Search" type="text" id="search"></input>
             <button id="btn-search" onClick={clickHandler}>
               Search
             </button>
           </div>
-        </div>
+        </div>}
+
+        {isLoading ||
+          <a href="./citySpots">
+            <div onClick={getInfo(0)}>
+              <div className="make-container">
+                <div className="make-text">
+                  <h2>Click here to make your own spot list</h2>
+                </div>
+                <div className="make-img">
+                  <img src={createImg} width="60px" />
+                </div>
+              </div>
+            </div>
+          </a>
+        }
         {isLoading && (
           <div className="loading-wrapper">
             <div className="loading">Loading...</div>
