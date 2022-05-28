@@ -11,13 +11,7 @@ function Browser() {
   const { data, isLoading } = useFetch(`http://localhost:8000/dataCities`);
 
   let navigate = useNavigate();
-  let cityKey = "";
-  window.getInfo = (props) => {
-    cityKey = props;
-    localStorage.setItem("objId", cityKey);
-    console.log(cityKey);
-  };
-
+  
   function clickHandler() {
     let userInput = document.getElementById("search").value;
     //Checks user input and displays correct spots
