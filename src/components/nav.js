@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import '../css/nav.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../icons/planeLogo.png';
+import logo from '../images/planeLogo.png';
 // import '../css/front.css'
 function Nav() {
 

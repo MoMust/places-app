@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "../css/browser.css";
-import createImg from "../icons/creation-icon-20.jpg";
+import createImg from "../images/creation-icon-20.jpg";
 import useFetch from "./useFetch";
 import Nav from "./nav";
 import CityList from "./cityList";
@@ -11,9 +11,12 @@ function Browser() {
   const { data, isLoading } = useFetch(`http://localhost:8000/dataCities`);
 
   let navigate = useNavigate();
-  
+  /**
+   * @function A function that executes when user makes input and submits
+   */
   function clickHandler() {
     let userInput = document.getElementById("search").value;
+
     //Checks user input and displays correct spots
     for (let i = 0; i < data.length; i++) {
       let element = data[i];
@@ -23,7 +26,7 @@ function Browser() {
         //Save city id to localstorage
         localStorage.setItem("objId", element.cityId);
         let path = `../citySpots`;
-
+        
         navigate(path);
         location.reload();
 

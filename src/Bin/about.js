@@ -1,4 +1,4 @@
-import Nav from './nav';
+import Nav from '../components/nav';
 //Informational page
 function About() {
   return (

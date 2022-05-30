@@ -1,24 +1,34 @@
 import { useState} from "react"
 
-// Get saved city object id from browser page and save in variabel
+// Get saved city object id from local storage and save in variabel
 let cityKey = localStorage.getItem('objId');
-function createCard({setCardName, setCardDescription}) {
+/**
+ * A function creates a new card/spot
+ * @function 
+ * @param {string} setCardName - Set user input name to be used in spots for POST request
+ * @param {string} setCardDescription -  Set user input description to be used in spots for POST request
+ */
+function createCard({setCardName, setCardDescription, errorMessage }) {
+
 //Set state based on what user inputs
 const [name, setName] = useState("")
 const [description, setDescription] = useState("")
+
+
 // const [city, setCity] = useState("Stockholm")
 let cityRefId = cityKey
+
 //Set state from inputs when updating card in Spots componenet
 setCardName(name)
 setCardDescription(description, cityKey)
+
  //On submit make a POST request with info provided from user
  const handleChange = async (e)=>{
+
    //Prevent form from clearing input fields
   e.preventDefault();
   const card = {name, description, cityRefId}
-  
-  // console.log(card);
-  // console.log(cityKey)
+
  // Make a post of new card
   fetch(`http://localhost:8000/dataSpots`, {
     method: 'POST',
@@ -66,9 +76,8 @@ setCardDescription(description, cityKey)
             type="text"
             maxLength="313"
           ></textarea>
-
           <br></br>
-
+          <div className="create-card-errorMessage">{errorMessage}</div>
           <button>Add card</button>
         </form>
       </div>

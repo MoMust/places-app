@@ -158,6 +158,12 @@
     text-align: center;
 
 }
+.create-card-errorMessage{
+    padding-top:0;
+    margin-top:-10px;
+    margin-bottom: 10px;
+    color:rgba(255, 0, 0, 0.674);
+}
 
 .create-card label {
     text-align: left;

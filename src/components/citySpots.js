@@ -10,8 +10,10 @@ function citySpots() {
   //Run useFetch function, return data from db and is loading state,
   const { data, isLoading } = useFetch(`http://localhost:8000/dataSpots`);
   //Set state for updating card from createCard to spots
+  
   const [cardName, setCardName] = useState("");
   const [cardDescription, setCardDescription] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   return (
     <>
       {/* If data fetched is not showing, show is loading message state */}
@@ -27,6 +29,7 @@ function citySpots() {
         {/* Call createCard component - for creating new custom card - Set state of input to update in Spots componenet*/}
         {
           <CreateCard
+            errorMessage={errorMessage}
             setCardName={setCardName}
             setCardDescription={setCardDescription}
           />
@@ -34,6 +37,7 @@ function citySpots() {
         {/* Get data and pass to Spots component - Get state of card to update card */}
         {data && (
           <Spots
+            setErrorMessage={setErrorMessage}
             spots={data}
             cardName={cardName}
             cardDescription={cardDescription}
