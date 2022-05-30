@@ -6,7 +6,6 @@ import logo from '../images/planeLogo.png';
 // import '../css/front.css'
 function Nav() {
 
-
   return (
     <header className="header">
       <div className="row row-nav">

@@ -79,6 +79,9 @@ nav ul {
     color:rgb(235, 233, 233) !important;
 }
 
+.selected{
+    font-size: 60px;
+}
 .nav-items:after {
     content: "";
     position: absolute;

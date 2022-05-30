@@ -4,7 +4,10 @@ import createImg from "../images/creation-icon-20.jpg";
 import useFetch from "./useFetch";
 import Nav from "./nav";
 import CityList from "./cityList";
-
+/**
+ * A component - renders browser page
+ * @function
+ */
 //This is browser page
 function Browser() {
   //Run useFetch function, return data of db and is loading state,

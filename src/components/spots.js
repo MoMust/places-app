@@ -80,13 +80,10 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
        <div class="card">
             <div class="card-image" style="background: url(${spot.image})"></div>
           <div class="card-text">
-              <span class="date">5 days</span>
-              
               <h2>${spot.name}</h2>
               <p>${spot.description}</p>
               <button id="btn" onclick="handleClickDel(${spot.id})">Delete</button>
               <button id="btnUpd" onclick="handleClickUpd(${spot.id})">Update</button>
-              
           </div>
           
           </div>`;
