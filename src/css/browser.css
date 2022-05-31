@@ -18,6 +18,16 @@
     display: grid;
     grid-template-columns: auto auto auto;
 }
+@media only screen and (max-width: 1343px){
+    #render-objects{
+        grid-template-columns: auto auto;
+    }
+}
+@media only screen and (max-width: 860px){
+    #render-objects{
+        grid-template-columns: auto;
+    }
+}
 
 #search-wrapper {
     display: flex;
@@ -79,25 +89,27 @@
 }
 
 .make-container {
-   
+
     width: 100%;
     height: 150px;
     background: #3696c6;
-        color: #fff;
-        border: 0;
-        padding: 8px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: 900;
-        font-family: 'Lobster', cursive;
-    
-        padding: 20px;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 900;
+    font-family: 'Lobster', cursive;
+
+    padding: 20px;
 }
 
-.make-text, .make-img {
+.make-text,
+.make-img {
     display: flex;
-        justify-content: center;
+    justify-content: center;
 }
+
 .make-container:hover {
     background: #5daad1;
 
@@ -158,11 +170,12 @@
     text-align: center;
 
 }
-.create-card-errorMessage{
-    padding-top:0;
-    margin-top:-10px;
+
+.create-card-errorMessage {
+    padding-top: 0;
+    margin-top: -10px;
     margin-bottom: 10px;
-    color:rgba(255, 0, 0, 0.674);
+    color: rgba(255, 0, 0, 0.674);
 }
 
 .create-card label {

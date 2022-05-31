@@ -38,18 +38,35 @@
 }
 .logo-image{
     
-    height:5vw;
+    height:80px;
+}
+/* Media query for logo */
+@media only screen and (max-width: 1343px) {
+    .logo-image {
+        height: 50px;
+    }
 }
 .icon-text {
     font-family: 'Barlow Condensed',
     sans-serif;
     color: #f3f5f9;
     /* color: #2F2F2F; */
-    font-size: 4vw;
+    font-size: 80px;
     font-weight: 700;
     height:100px;
     display: grid;
     align-items: center;
+}
+/* Media query for icon text */
+@media only screen and (max-width: 1343px) {
+    .icon-text{
+        font-size: 50px;
+    }
+}
+@media only screen and (max-width: 860px) {
+    .icon-text{
+        font-size: 40px;
+    }
 }
 
 nav ul {
