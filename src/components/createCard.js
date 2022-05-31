@@ -3,10 +3,10 @@ import { useState} from "react"
 // Get saved city object id from local storage and save in variabel
 let cityKey = localStorage.getItem('objId');
 /**
- * A function creates a new card/spot
- * @function 
+ * @function CreateCard A function creates a new card/spot
  * @param {string} setCardName - Set user input name to be used in spots for POST request
  * @param {string} setCardDescription -  Set user input description to be used in spots for POST request
+ *  @param {string} errorMessage - Takes a variabel containing a string of an error message
  */
 function createCard({setCardName, setCardDescription, errorMessage }) {
 
@@ -23,8 +23,13 @@ setCardName(name)
 setCardDescription(description, cityKey)
 
  //On submit make a POST request with info provided from user
+ /**
+  * Commentar
+  * @function handleChange Makes a POST to database
+  * @param {object} e Takes an event as a parameter
+  */
  const handleChange = async (e)=>{
-
+ 
    //Prevent form from clearing input fields
   e.preventDefault();
   const card = {name, description, cityRefId}

@@ -1,12 +1,11 @@
 // import Create from './create'
-import { useState } from "react"
+import { useState } from "react";
 
 // Get saved city id from browser page and save in variabel
 let cityKey = localStorage.getItem("objId");
 //Function/component - To get spots in each city
 /**
- * A function takes data from useFetch and shows only matched spots for city thats clicked on
- * @function
+ * @function spots function takes data from useFetch and shows only matched spots for city thats clicked on
 
  * @param {obj} spots - Data from fetch
  * @param {string} cardName - Gets the name of the card from createCard componenet, for POST request
@@ -14,17 +13,17 @@ let cityKey = localStorage.getItem("objId");
  */
 function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
   //Check if its not an array if so set prop to a singel element array. (For singel objects)
-    const [error, setError] = useState("");
+  const [error, setError] = useState("");
   let cityData = spots;
   let arr = [];
   let output = "";
-  let message = ''
+  let message = "";
 
-  
   // console.log('cityData')
   // console.log(cityData)
   //To get spots related to city
   //Chek if cityKey matches spots reference key
+
   for (let i = 0; i < cityData.length; i++) {
     //Key do not match
     if (cityKey != cityData[i].cityRefId) {
@@ -52,9 +51,9 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
   //Make an update of card when update button is clicked
   window.handleClickUpd = (id) => {
     if (cardName == "" && cardDescription == "") {
-        message = "You have to input name and/-or description";
-      setError(message)
-      console.log('message')
+      message = "You have to input name and/-or description";
+      setError(message);
+      console.log("message");
     } else {
       fetch(`http://localhost:8000/dataSpots/` + id, {
         method: "PUT",

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: browser.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: browser.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useNavigate } from "react-router-dom";
+import "../css/browser.css";
+import createImg from "../images/creation-icon-20.jpg";
+import useFetch from "./useFetch";
+import Nav from "./nav";
+import CityList from "./cityList";
+/**
+ * A component - renders browser page
+ * @function
+ */
+//This is browser page
+function Browser() {
+  //Run useFetch function, return data of db and is loading state,
+  const { data, isLoading } = useFetch(`http://localhost:8000/dataCities`);
+
+  let navigate = useNavigate();
+  /**
+   * @function clickHandler function that executes when user makes input and submits
+   */
+  function clickHandler() {
+    let userInput = document.getElementById("search").value;
+
+    //Checks user input and displays correct spots
+    for (let i = 0; i &lt; data.length; i++) {
+      let element = data[i];
+
+      //If input matches show spots
+      if (element.name.toUpperCase() == userInput.toUpperCase()) {
+        //Save city id to localstorage
+        localStorage.setItem("objId", element.cityId);
+        let path = `../citySpots`;
+        
+        navigate(path);
+        location.reload();
+
+        console.log(element);
+        console.log(element.cityId);
+        //If input do not match send message
+      } else {
+        console.log("Cannot find what you are looking");
+        document.getElementById(
+          "render-objects"
+        ).innerHTML = `&lt;div class="mismatch">Cannot find what you are looking for&lt;/div>`;
+      }
+    }
+    // console.log('userInput')
+    // console.log(userInput)
+  }
+
+  // console.log('Check data')
+  // console.log(data)
+  return (
+    &lt;>
+      {/* If data fetched is not showing, show is loading message state */}
+
+      {/* Get data and pass to CityList component */}
+      {data &amp;&amp; &lt;CityList cities={data} />}
+      {/* Main body rendering */}
+      &lt;div id="body">
+        {/* Call nav componenet */}
+        &lt;Nav />
+
+        {/* Search JSX*/}
+        {isLoading || &lt;div id="search-wrapper">
+          &lt;div id="search-container">
+            &lt;input placeholder="Search" type="text" id="search">&lt;/input>
+            &lt;button id="btn-search" onClick={clickHandler}>
+              Search
+            &lt;/button>
+          &lt;/div>
+        &lt;/div>}
+
+        {isLoading ||
+          &lt;a href="./citySpots">
+            &lt;div onClick={getInfo(0)}>
+              &lt;div className="make-container">
+                &lt;div className="make-text">
+                  &lt;h2>Click here to make your own spot list&lt;/h2>
+                &lt;/div>
+                &lt;div className="make-img">
+                  &lt;img src={createImg} width="60px" />
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/a>
+        }
+        {isLoading &amp;&amp; (
+          &lt;div className="loading-wrapper">
+            &lt;div className="loading">Loading...&lt;/div>
+          &lt;/div>
+        )}
+        {/* Rendering objects*/}
+        &lt;div id="render-objects">&lt;/div>
+      &lt;/div>
+    &lt;/>
+  );
+}
+
+export default Browser;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#Browser">Browser</a></li><li><a href="global.html#CityListAfunction/componentthatgetsallcities">CityList A function/component that gets all cities</a></li><li><a href="global.html#citySpots-RenderscitySpotspage">citySpots - Renders citySpots page</a></li><li><a href="global.html#clickHandlerfunctionthatexecuteswhenusermakesinputandsubmits">clickHandler function that executes when user makes input and submits</a></li><li><a href="global.html#CreateCardAfunctioncreatesanewcard/spot">CreateCard A function creates a new card/spot</a></li><li><a href="global.html#Fetchdatafromjsonserverandcreatealoadingmessagewhilewaitingtogetdata">Fetch data from json server and create a loading message while waiting to get data</a></li><li><a href="global.html#Front">Front</a></li><li><a href="global.html#handleChangeMakesaPOSTtodatabase">handleChange Makes a POST to database</a></li><li><a href="global.html#Renderscomponenetnav">Renders componenet nav</a></li><li><a href="global.html#spotsfunctiontakesdatafromuseFetchandshowsonlymatchedspotsforcitythatsclickedon">spots function takes data from useFetch and shows only matched spots for city thats clicked on</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Tue May 31 2022 11:46:59 GMT+0200 (centraleuropeisk sommartid)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

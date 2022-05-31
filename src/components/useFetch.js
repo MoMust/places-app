@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react"
-
+/**
+ * @function Fetch data from json server and create a loading message while waiting to get data
+ * @param {string} url Takes a url as a parameter
+ * @returns Data - isLoading
+ */
 const useFetch = (url) =>{
      //Use state for changing the state of the page
     const [data, setData] = useState(null)

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: spots.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: spots.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// import Create from './create'
+import { useState } from "react";
+
+// Get saved city id from browser page and save in variabel
+let cityKey = localStorage.getItem("objId");
+//Function/component - To get spots in each city
+/**
+ * @function spots function takes data from useFetch and shows only matched spots for city thats clicked on
+
+ * @param {obj} spots - Data from fetch
+ * @param {string} cardName - Gets the name of the card from createCard componenet, for POST request
+ * @param {string} cardDescription - Gets the description of the card from createCard componenet, for POST request
+ */
+function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
+  //Check if its not an array if so set prop to a singel element array. (For singel objects)
+  const [error, setError] = useState("");
+  let cityData = spots;
+  let arr = [];
+  let output = "";
+  let message = "";
+
+  // console.log('cityData')
+  // console.log(cityData)
+  //To get spots related to city
+  //Chek if cityKey matches spots reference key
+
+  for (let i = 0; i &lt; cityData.length; i++) {
+    //Key do not match
+    if (cityKey != cityData[i].cityRefId) {
+      // console.log('no match')
+      //Key matches, create an array with matching objects
+    } else {
+      arr.push(cityData[i]);
+      // console.log(arr);
+    }
+  }
+  for (let i = 0; i &lt; cityData.length; i++) {
+    // console.log(cityData[i].id)
+  }
+
+  //Make DELETE of card when delete button is clicked
+  window.handleClickDel = (id) => {
+    if (window.confirm("Are you sure that you want to delete this card?")) {
+      fetch("http://localhost:8000/dataSpots/" + id, {
+        method: "DELETE",
+      }).then(() => {
+        location.reload();
+      });
+    }
+  };
+  //Make an update of card when update button is clicked
+  window.handleClickUpd = (id) => {
+    if (cardName == "" &amp;&amp; cardDescription == "") {
+      message = "You have to input name and/-or description";
+      setError(message);
+      console.log("message");
+    } else {
+      fetch(`http://localhost:8000/dataSpots/` + id, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: cardName,
+          description: cardDescription,
+          cityRefId: cityKey,
+        }),
+      }).then(() => {
+        console.log("Spot updated");
+        location.reload();
+      });
+    }
+  };
+  setErrorMessage(error);
+  return (
+    &lt;>
+      {arr.forEach((spot) => {
+        //  console.log(spot)
+
+        output += `
+       &lt;div class="card">
+            &lt;div class="card-image" style="background: url(${spot.image})">&lt;/div>
+          &lt;div class="card-text">
+              &lt;h2>${spot.name}&lt;/h2>
+              &lt;p>${spot.description}&lt;/p>
+              &lt;button id="btn" onclick="handleClickDel(${spot.id})">Delete&lt;/button>
+              &lt;button id="btnUpd" onclick="handleClickUpd(${spot.id})">Update&lt;/button>
+          &lt;/div>
+          
+          &lt;/div>`;
+
+        document.getElementById("render-objects").innerHTML = output;
+      })}
+    &lt;/>
+  );
+}
+
+export default Spots;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#Browser">Browser</a></li><li><a href="global.html#CityListAfunction/componentthatgetsallcities">CityList A function/component that gets all cities</a></li><li><a href="global.html#citySpots-RenderscitySpotspage">citySpots - Renders citySpots page</a></li><li><a href="global.html#clickHandlerfunctionthatexecuteswhenusermakesinputandsubmits">clickHandler function that executes when user makes input and submits</a></li><li><a href="global.html#CreateCardAfunctioncreatesanewcard/spot">CreateCard A function creates a new card/spot</a></li><li><a href="global.html#Fetchdatafromjsonserverandcreatealoadingmessagewhilewaitingtogetdata">Fetch data from json server and create a loading message while waiting to get data</a></li><li><a href="global.html#Front">Front</a></li><li><a href="global.html#handleChangeMakesaPOSTtodatabase">handleChange Makes a POST to database</a></li><li><a href="global.html#Renderscomponenetnav">Renders componenet nav</a></li><li><a href="global.html#spotsfunctiontakesdatafromuseFetchandshowsonlymatchedspotsforcitythatsclickedon">spots function takes data from useFetch and shows only matched spots for city thats clicked on</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Tue May 31 2022 11:46:59 GMT+0200 (centraleuropeisk sommartid)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

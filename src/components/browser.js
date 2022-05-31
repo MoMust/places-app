@@ -15,7 +15,7 @@ function Browser() {
 
   let navigate = useNavigate();
   /**
-   * @function A function that executes when user makes input and submits
+   * @function clickHandler function that executes when user makes input and submits
    */
   function clickHandler() {
     let userInput = document.getElementById("search").value;
@@ -51,26 +51,32 @@ function Browser() {
   // console.log(data)
   return (
     <>
-      {/* If data fetched is not showing, show is loading message state */}
-
       {/* Get data and pass to CityList component */}
       {data && <CityList cities={data} />}
+      <Nav />
       {/* Main body rendering */}
       <div id="body">
         {/* Call nav componenet */}
-        <Nav />
+
+        {isLoading && (
+          <div className="loading-wrapper">
+            <div className="loading">Loading...</div>
+          </div>
+        )}
 
         {/* Search JSX*/}
-        {isLoading || <div id="search-wrapper">
-          <div id="search-container">
-            <input placeholder="Search" type="text" id="search"></input>
-            <button id="btn-search" onClick={clickHandler}>
-              Search
-            </button>
+        {isLoading || (
+          <div id="search-wrapper">
+            <div id="search-container">
+              <input placeholder="Search" type="text" id="search"></input>
+              <button id="btn-search" onClick={clickHandler}>
+                Search
+              </button>
+            </div>
           </div>
-        </div>}
+        )}
 
-        {isLoading ||
+        {isLoading || (
           <a href="./citySpots">
             <div onClick={getInfo(0)}>
               <div className="make-container">
@@ -83,14 +89,11 @@ function Browser() {
               </div>
             </div>
           </a>
-        }
-        {isLoading && (
-          <div className="loading-wrapper">
-            <div className="loading">Loading...</div>
-          </div>
         )}
+
         {/* Rendering objects*/}
         <div id="render-objects"></div>
+        {/* If data fetched is not showing, show loading message state */}
       </div>
     </>
   );

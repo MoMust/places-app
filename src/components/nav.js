@@ -4,6 +4,9 @@ import '../css/nav.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../images/planeLogo.png';
 // import '../css/front.css'
+/**
+ * @function Renders componenet nav
+ */
 function Nav() {
 
   return (

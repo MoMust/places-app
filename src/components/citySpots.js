@@ -6,6 +6,9 @@ import Nav from "./nav";
 import CreateCard from "./createCard";
 import { useState } from "react";
 //This is places page
+/**
+ * @function citySpots - Renders citySpots page
+ */
 function citySpots() {
   //Run useFetch function, return data from db and is loading state,
   const { data, isLoading } = useFetch(`http://localhost:8000/dataSpots`);
@@ -16,16 +19,15 @@ function citySpots() {
   const [errorMessage, setErrorMessage] = useState("");
   return (
     <>
-      {/* If data fetched is not showing, show is loading message state */}
-      {isLoading && (
-        <div className="loading-wrapper">
-          <div className="loading">Loading...</div>
-        </div>
-      )}
-
       <div id="body">
         {/* Call nav componenet */}
         <Nav />
+        {/* If data fetched is not showing, show loading message state */}
+        {isLoading && (
+          <div className="loading-wrapper">
+            <div className="loading">Loading...</div>
+          </div>
+        )}
         {/* Call createCard component - for creating new custom card - Set state of input to update in Spots componenet*/}
         {
           <CreateCard

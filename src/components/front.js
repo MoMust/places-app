@@ -1,6 +1,9 @@
 import "../css/front.css";
 import Nav from './nav'
-
+/**
+ * @function Front
+ * @returns Returns landing page
+ */
 function Front() {
   return (
     <>

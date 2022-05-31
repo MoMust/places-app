@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: createCard.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: createCard.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useState} from "react"
+
+// Get saved city object id from local storage and save in variabel
+let cityKey = localStorage.getItem('objId');
+/**
+ * @function CreateCard A function creates a new card/spot
+ * @param {string} setCardName - Set user input name to be used in spots for POST request
+ * @param {string} setCardDescription -  Set user input description to be used in spots for POST request
+ *  @param {string} errorMessage - Takes a variabel containing a string of an error message
+ */
+function createCard({setCardName, setCardDescription, errorMessage }) {
+
+//Set state based on what user inputs
+const [name, setName] = useState("")
+const [description, setDescription] = useState("")
+
+
+// const [city, setCity] = useState("Stockholm")
+let cityRefId = cityKey
+
+//Set state from inputs when updating card in Spots componenet
+setCardName(name)
+setCardDescription(description, cityKey)
+
+ //On submit make a POST request with info provided from user
+ /**
+  * Commentar
+  * @function handleChange Makes a POST to database
+  * @param {object} e Takes an event as a parameter
+  */
+ const handleChange = async (e)=>{
+ 
+   //Prevent form from clearing input fields
+  e.preventDefault();
+  const card = {name, description, cityRefId}
+
+ // Make a post of new card
+  fetch(`http://localhost:8000/dataSpots`, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(card)
+  }).then(() =>{
+    console.log('New spot added')
+    location.reload();
+  })
+
+}
+
+  return (
+    &lt;div className="card create-card">
+      &lt;div className="card-image">&lt;/div>
+      &lt;div className="card-text card-text-area">
+        &lt;h2>Create new spot&lt;/h2>
+        &lt;form onSubmit={handleChange}>
+          &lt;label>
+            Spot title{" "}
+            &lt;span style={{ fontStyle: "italic", fontSize: "15px" }}>
+              (max 20 char)
+            &lt;/span>
+          &lt;/label>
+          &lt;input
+            placeholder="Type title here..."
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            type="text"
+            maxLength="20"
+          >&lt;/input>
+          &lt;br>&lt;/br>
+          &lt;label>
+            Description{" "}
+            &lt;span style={{ fontStyle: "italic", fontSize: "15px" }}>
+              (max 313 char)
+            &lt;/span>
+          &lt;/label>
+          &lt;textarea
+            placeholder="Type description here..."
+            required
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            type="text"
+            maxLength="313"
+          >&lt;/textarea>
+          &lt;br>&lt;/br>
+          &lt;div className="create-card-errorMessage">{errorMessage}&lt;/div>
+          &lt;button>Add card&lt;/button>
+        &lt;/form>
+      &lt;/div>
+    &lt;/div>
+  );
+  }
+
+export default createCard
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#Browser">Browser</a></li><li><a href="global.html#CityListAfunction/componentthatgetsallcities">CityList A function/component that gets all cities</a></li><li><a href="global.html#citySpots-RenderscitySpotspage">citySpots - Renders citySpots page</a></li><li><a href="global.html#clickHandlerfunctionthatexecuteswhenusermakesinputandsubmits">clickHandler function that executes when user makes input and submits</a></li><li><a href="global.html#CreateCardAfunctioncreatesanewcard/spot">CreateCard A function creates a new card/spot</a></li><li><a href="global.html#Fetchdatafromjsonserverandcreatealoadingmessagewhilewaitingtogetdata">Fetch data from json server and create a loading message while waiting to get data</a></li><li><a href="global.html#Front">Front</a></li><li><a href="global.html#handleChangeMakesaPOSTtodatabase">handleChange Makes a POST to database</a></li><li><a href="global.html#Renderscomponenetnav">Renders componenet nav</a></li><li><a href="global.html#spotsfunctiontakesdatafromuseFetchandshowsonlymatchedspotsforcitythatsclickedon">spots function takes data from useFetch and shows only matched spots for city thats clicked on</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Tue May 31 2022 11:46:59 GMT+0200 (centraleuropeisk sommartid)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

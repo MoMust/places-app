@@ -4,7 +4,7 @@ let cityKey = "";
 /**
  * Gets and saves city id to a variabel called cityKey to store in local storage
  * 
- * @param {number} props 
+ * @param {number} props Takes city object id
  */
  window.getInfo = (props) => {
   cityKey = props;
@@ -13,8 +13,7 @@ let cityKey = "";
 };
 
 /**
- * A function/component that gets all cities
- * @function
+ * @function CityList A function/component that gets all cities
  * @param {object} cities - Data generated from useFetch component
  * @returns Template literal - HTML to DOM
  */
