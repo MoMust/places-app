@@ -67,13 +67,14 @@
     padding-top: 3px;
 }
 
-#body a {
+#body a{
     text-decoration: none;
 }
 
 .loading-wrapper {
    display: flex;
    justify-content: center;
+   
 }
 
 .loading {
@@ -110,7 +111,7 @@
     justify-content: center;
 }
 
-.make-container:hover {
+#make-c:hover {
     background: #5daad1;
 
 }
@@ -168,7 +169,7 @@
     max-width: 400px;
     margin: 0 auto;
     text-align: center;
-
+    margin-bottom: 20px;
 }
 
 .create-card-errorMessage {
@@ -222,6 +223,10 @@ button {
 button:hover {
     background: #5daad1;
 
+}
+
+#header-text{
+    font-size: 50px;
 }
 
 /* width */

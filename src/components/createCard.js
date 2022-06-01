@@ -13,14 +13,16 @@ function createCard({setCardName, setCardDescription, errorMessage }) {
 //Set state based on what user inputs
 const [name, setName] = useState("")
 const [description, setDescription] = useState("")
+const [city, setCity] = useState("")
 
 
 // const [city, setCity] = useState("Stockholm")
 let cityRefId = cityKey
-
+let image =
+  "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_fit,w_202/v1653685815/creation-icon-20_byfbzv.png";
 //Set state from inputs when updating card in Spots componenet
 setCardName(name)
-setCardDescription(description, cityKey)
+setCardDescription(description)
 
  //On submit make a POST request with info provided from user
  /**
@@ -32,7 +34,7 @@ setCardDescription(description, cityKey)
  
    //Prevent form from clearing input fields
   e.preventDefault();
-  const card = {name, description, cityRefId}
+  const card = {name, description, cityRefId, image}
 
  // Make a post of new card
   fetch(`http://localhost:8000/dataSpots`, {

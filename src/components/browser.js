@@ -79,7 +79,7 @@ function Browser() {
         {isLoading || (
           <a href="./citySpots">
             <div onClick={getInfo(0)}>
-              <div className="make-container">
+              <div id="make-c" className="make-container">
                 <div className="make-text">
                   <h2>Click here to make your own spot list</h2>
                 </div>

@@ -9,7 +9,9 @@ let cityKey = "";
  window.getInfo = (props) => {
   cityKey = props;
   localStorage.setItem("objId", cityKey);
+  
   console.log(cityKey);
+  
 };
 
 /**

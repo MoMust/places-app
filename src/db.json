@@ -2,14 +2,12 @@
   "dataCities": [
     {
       "name": "Your spots",
-      "country": "Sweden",
       "description": "Your special spots saves here",
       "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_fit,w_202/v1653685815/creation-icon-20_byfbzv.png",
       "cityId": 0
     },
     {
       "name": "Stockholm",
-      "country": "Sweden",
       "description": "Welcome to Stockholm, one of the world’s most beautiful capitals. Built on 14 islands around one of Europe’s largest and best-preserved mediaeval city centres, the city is stunningly located by the Baltic Sea.",
       "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650805314/small_image_78fddc1aaf.jpg",
       "cityId": 1
@@ -30,7 +28,6 @@
     },
     {
       "name": "Västerås",
-      "country": "Sweden",
       "description": "Welcome to Västerås, one of the world’s most beautiful capitals. Built on 14 islands around one of Europe’s largest and best-preserved mediaeval city centres, the city is stunningly located by the Baltic Sea.",
       "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/v1650806235/small_Malmoe_e1638117230291_3505397693.jpg",
       "cityId": 4
@@ -40,6 +37,7 @@
     {
       "id": 1,
       "name": "Stadshuset",
+      "city": "Stockholm",
       "description": "Nestled at the water's edge and topped by three golden crowns, the City Hall (Stockholms stadshus, or Stadshuset) is one of Stockholm's most iconic buildings and stars in countless images and postcards of the city. Dating from 1923, the hall opened on that most Swedish of dates Midsummer's Eve.",
       "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_scale,w_410/v1652264222/project-places/stadshuset_fkgwqv.jpg",
       "cityRefId": 1
@@ -47,6 +45,7 @@
     {
       "id": 2,
       "name": "Gamla Stan",
+      "city": "Stockholm",
       "description": "Dating from the 1200s and crammed with must-see sights, attractions, cafés, authentic restaurants, and boutique shops, the area of Gamla Stan (Old Town) is a living, breathing museum in its own right. For many, this is the first stop on their journey of exploration - and rightly so.",
       "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_scale,w_400/v1652262560/project-places/Gamla-Stan-square_wbwcwg.jpg",
       "cityRefId": 1
@@ -54,6 +53,7 @@
     {
       "id": 3,
       "name": "Djurgården",
+      "city": "Stockholm",
       "description": "A tranquil oasis in the heart of the city, the island of Djurgården draws crowds of tourists and locals alike, particularly during the summer months of long lazy days and short nights. The park forms part of the Royal National City Park, and being home to several of Stockholm's top museums and other attractions.",
       "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_scale,w_440/v1652262366/project-places/kungliga-djurgarden-english_o6yc3t.jpg",
       "cityRefId": 1
@@ -61,6 +61,7 @@
     {
       "id": 4,
       "name": "Gothenburg Museum of Art",
+      "city": "Gothenburg",
       "description": "The prestigious museum opened in 1923, in time for Gothenburgs International Exhibition. You can come to appreciate works from across Europe painted from the 1400s to the 21st century.  But the museums acclaim comes from its 19th-century Nordic art",
       "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_scale,w_410/v1653673734/Gothenburg-Museum-of-Art_tqdrsv.jpg",
       "cityRefId": 2
@@ -68,6 +69,7 @@
     {
       "id": 5,
       "name": "Liseberg",
+      "city": "Gothenburg",
       "description": "This thriving amusement park goes back to 1923 and draws big crowds today. Liseberg has a traditional character and abounds with greenery and woodland, but its lineup of high-tech rides is constantly evolving. The steel roller coaster Helix was unveiled in 2014 and the state -of-the-art Valkyria is in the pipeline for 2018.",
       "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_scale,w_410/v1653674218/Liseberg_qqikpc.jpg",
       "cityRefId": 2
@@ -75,6 +77,7 @@
     {
       "id": 6,
       "name": "Gothenburg Archipelago",
+      "city": "Gothenburg",
       "description": "Close to Gothenburg you can embark on a journey through the little granite islands of the Southern and Northern Gothenburg archipelago. You’ll catch a ferry from Saltholmen and can use that ticket to jump from island to island, calling in on painted fishing villages and old shipping settlements.",
       "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_scale,w_410/v1653674379/Gothenburg-Archipelago_hmxb8r.jpg",
       "cityRefId": 2
@@ -83,41 +86,29 @@
       "id": 7,
       "name": "Malmöparken",
       "description": "Some text",
+      "city": "Malmo",
       "cityRefId": 3
     },
     {
       "id": 8,
       "name": "Malmöparken2",
       "description": "Some text",
+      "city": "Malmo",
       "cityRefId": 3
     },
     {
       "id": 9,
       "name": "Malmöparken3",
       "description": "Some text",
+      "city": "Malmo",
       "cityRefId": 3
     },
     {
-      "name": "ggggggggggggg",
-      "description": "",
-      "id": 10
-    },
-    {
-      "name": "kkkkkkkkkkkkkkkk",
-      "description": "pppppppppppppppp",
-      "id": 11
-    },
-    {
-      "name": "djsnjsdnfjdsfnsdnfsd",
-      "description": "A tranquil oasis in the heart of the city, the island of Djurgården draws crowds of tourists and locals alike, particularly during the summer months of long lazy days and short nights. The park forms part of the Royal National City Park, and being home to several of Stockholm's top museums and other attractions.",
-      "cityRefId": "1",
-      "id": 12
-    },
-    {
-      "name": "sadasd",
-      "description": "",
-      "cityRefId": "0",
-      "id": 13
+      "id": 10,
+      "city": "Västerås",
+      "name": "Västeråsplatsen",
+      "description": "Some text",
+      "cityRefId": 4
     }
   ]
 }

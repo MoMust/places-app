@@ -3,6 +3,9 @@ import { useState } from "react";
 
 // Get saved city id from browser page and save in variabel
 let cityKey = localStorage.getItem("objId");
+
+
+
 //Function/component - To get spots in each city
 /**
  * @function spots function takes data from useFetch and shows only matched spots for city thats clicked on
@@ -18,7 +21,10 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
   let arr = [];
   let output = "";
   let message = "";
-
+  let header = "";
+  // console.log('Citydata')
+  // console.log(cityData)
+  
   // console.log('cityData')
   // console.log(cityData)
   //To get spots related to city
@@ -28,19 +34,33 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
     //Key do not match
     if (cityKey != cityData[i].cityRefId) {
       // console.log('no match')
+      continue;
       //Key matches, create an array with matching objects
     } else {
+      console.log(cityData[i])
       arr.push(cityData[i]);
+      
+      
       // console.log(arr);
     }
   }
+  console.log(cityKey)
+ 
   for (let i = 0; i < cityData.length; i++) {
-    // console.log(cityData[i].id)
+    const element = cityData[i];
+    if (cityKey != element.cityRefId) {
+       
+       continue;
+    }else{
+      header = cityData[i].city;
+      break;
+    }
+   
   }
 
   //Make DELETE of card when delete button is clicked
   window.handleClickDel = (id) => {
-    if (window.confirm("Are you sure that you want to delete this card?")) {
+    if (window.confirm("Are you sure you want to delete this spot?")) {
       fetch("http://localhost:8000/dataSpots/" + id, {
         method: "DELETE",
       }).then(() => {
@@ -86,7 +106,7 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
           </div>
           
           </div>`;
-
+        document.getElementById("header-text").innerHTML = header;
         document.getElementById("render-objects").innerHTML = output;
       })}
     </>

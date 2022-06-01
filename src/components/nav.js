@@ -15,7 +15,9 @@ function Nav() {
         <div className="icon-wrapper col-12">
           <img className="logo-image" src={logo}></img>
           <div className="icon-text">
-            <p>Travel Places</p>
+            <a href="./front.js">
+              <p>Travel Places</p>
+            </a>
           </div>
         </div>
         <div className="nav-wrapper col-6">

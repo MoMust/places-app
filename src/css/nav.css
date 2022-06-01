@@ -46,12 +46,12 @@
         height: 50px;
     }
 }
-.icon-text {
+.icon-text > a >p{
     font-family: 'Barlow Condensed',
     sans-serif;
     color: #f3f5f9;
     /* color: #2F2F2F; */
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 700;
     height:100px;
     display: grid;

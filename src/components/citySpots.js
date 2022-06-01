@@ -23,19 +23,20 @@ function citySpots() {
         {/* Call nav componenet */}
         <Nav />
         {/* If data fetched is not showing, show loading message state */}
-        {isLoading && (
+        {/* If data is OK Call createCard component - for creating new custom card - Gets state of input to update in Spots componenet*/}
+        {(isLoading && (
           <div className="loading-wrapper">
             <div className="loading">Loading...</div>
           </div>
-        )}
-        {/* Call createCard component - for creating new custom card - Set state of input to update in Spots componenet*/}
-        {
+        )) || (
           <CreateCard
             errorMessage={errorMessage}
             setCardName={setCardName}
             setCardDescription={setCardDescription}
           />
-        }
+        )}
+
+        {}
         {/* Get data and pass to Spots component - Get state of card to update card */}
         {data && (
           <Spots
@@ -45,6 +46,11 @@ function citySpots() {
             cardDescription={cardDescription}
           />
         )}
+        <div className="make-container">
+          <div className="make-text">
+            <h2 id="header-text"></h2>
+          </div>
+        </div>
         <div id="render-objects"></div>
       </div>
     </>
