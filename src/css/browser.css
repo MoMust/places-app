@@ -28,7 +28,7 @@
         grid-template-columns: auto;
     }
 }
-
+/* SEARCH */
 #search-wrapper {
     display: flex;
     justify-content: center;
@@ -70,7 +70,7 @@
 #body a{
     text-decoration: none;
 }
-
+/* LOADING */
 .loading-wrapper {
    display: flex;
    justify-content: center;
@@ -88,9 +88,8 @@
     margin-left: 20rem;
     font-size: 66px;
 }
-
-.make-container {
-
+/* USER SPOT LIST */
+.user-list-container{
     width: 100%;
     height: 150px;
     background: #3696c6;
@@ -101,21 +100,20 @@
     cursor: pointer;
     font-weight: 900;
     font-family: 'Lobster', cursive;
-
     padding: 20px;
 }
 
-.make-text,
-.make-img {
+.user-list-text,
+.user-list-img{
     display: flex;
     justify-content: center;
 }
 
-#make-c:hover {
+.user-list-container:hover {
     background: #5daad1;
 
 }
-
+/* CARD */
 .card {
     display: grid;
     grid-template-columns: 400px;
@@ -154,7 +152,7 @@
     padding: 5px;
     font-size: 20px;
 }
-
+/* CREATE CARD */
 .create-card {
     display: grid;
     grid-template-columns: 400px;
@@ -208,7 +206,7 @@
 .create-card textarea {
     height: 130px;
 }
-
+/* BUTTON */
 button {
     background: #3696c6;
     color: #fff;

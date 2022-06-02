@@ -1,4 +1,5 @@
 let cityKey = "";
+
 //Function get and save cityKey on click of specific city
 //Save to localstorage
 /**
@@ -19,7 +20,7 @@ let cityKey = "";
  * @param {object} cities - Data generated from useFetch component
  * @returns Template literal - HTML to DOM
  */
-function CityList({ cities }) {
+function Cities({ cities }) {
 
   let data = cities;
   let output = "";
@@ -62,4 +63,4 @@ function CityList({ cities }) {
   }
 }
 
-export default CityList;
+export default Cities;

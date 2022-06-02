@@ -3,7 +3,7 @@ import "../css/browser.css";
 import createImg from "../images/creation-icon-20.jpg";
 import useFetch from "./useFetch";
 import Nav from "./nav";
-import CityList from "./cities";
+import Cities from "./cities";
 /**
  * A component - renders browser page
  * @function
@@ -50,7 +50,7 @@ function Browser() {
   return (
     <>
       {/* Get data and pass to CityList component */}
-      {data && <CityList cities={data} />}
+      {data && <Cities cities={data} />}
       {/* Call nav componenet */}
       <Nav />
       {/* Main body rendering */}
@@ -78,11 +78,11 @@ function Browser() {
         {isLoading || (
           <a href="./spotsPage">
             <div onClick={getInfo(0)}>
-              <div id="make-c" className="make-container">
-                <div className="make-text">
+              <div className="user-list-container">
+                <div className="user-list-text">
                   <h2>Click here to make your own spot list</h2>
                 </div>
-                <div className="make-img">
+                <div className="user-list-img">
                   <img src={createImg} width="60px" />
                 </div>
               </div>
