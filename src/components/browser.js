@@ -76,7 +76,7 @@ function Browser() {
         )}
         {/* Users private list of spots  */}
         {isLoading || (
-          <a href="./citySpots">
+          <a href="./spotsPage">
             <div onClick={getInfo(0)}>
               <div id="make-c" className="make-container">
                 <div className="make-text">
