@@ -3,7 +3,7 @@ import "../css/browser.css";
 import createImg from "../images/creation-icon-20.jpg";
 import useFetch from "./useFetch";
 import Nav from "./nav";
-import CityList from "./cityList";
+import CityList from "./cities";
 /**
  * A component - renders browser page
  * @function

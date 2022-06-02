@@ -9,7 +9,7 @@ import { useState } from "react";
 /**
  * @function citySpots - Renders citySpots page
  */
-function citySpots() {
+function SpotsPage() {
   //Run useFetch function, return data from db and is loading state,
   const { data, isLoading } = useFetch(`http://localhost:8000/dataSpots`);
   //Set state for updating card from createCard to spots
@@ -52,4 +52,4 @@ function citySpots() {
   );
 }
 
-export default citySpots;
+export default SpotsPage;

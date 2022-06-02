@@ -31,7 +31,7 @@ function CityList({ cities }) {
 
     data.forEach((city) => {
       output += `
-       <a href="./citySpots"><div class="card" onclick="getInfo(${city.cityId})">
+       <a href="./spotsPage"><div class="card" onclick="getInfo(${city.cityId})">
             <div class="card-image" style="background: url(${city.image})"></div>
           <div class="card-text">
               <h2>${city.name}</h2>
