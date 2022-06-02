@@ -28,7 +28,7 @@ function Browser() {
       if (element.name.toUpperCase() == userInput.toUpperCase()) {
         //Save city id to localstorage
         localStorage.setItem("objId", element.cityId);
-        let path = `../citySpots`;
+        let path = `../spotsPage`;
 
         navigate(path);
         location.reload();
@@ -37,10 +37,9 @@ function Browser() {
         console.log(element.cityId);
         //If input do not match send message
       } else {
-        console.log("Cannot find what you are looking");
         document.getElementById(
           "render-objects"
-        ).innerHTML = `<div class="mismatch">Cannot find what you are looking for</div>`;
+        ).innerHTML = `<div class="search-mismatch">No matches</div>`;
       }
     }
     // console.log('userInput')

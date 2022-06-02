@@ -70,24 +70,25 @@
 #body a{
     text-decoration: none;
 }
+
+.search-mismatch {
+    background-color: grey;
+    margin-top: 6rem;
+    margin-left: 10rem;
+    font-size: 50px;
+}
+
 /* LOADING */
 .loading-wrapper {
    display: flex;
    justify-content: center;
-   
 }
 
 .loading {
     font-size: 66px;
-
 }
 
-.mismatch {
-    background-color: grey;
-    margin-top: 10rem;
-    margin-left: 20rem;
-    font-size: 66px;
-}
+
 /* USER SPOT LIST */
 .user-list-container{
     width: 100%;
