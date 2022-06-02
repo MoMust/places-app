@@ -40,8 +40,7 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
   }
   // console.log(cityKey)
  
-
-  //Make DELETE of card when delete button is clicked
+  //DELETE of card when delete button is clicked
   window.handleClickDel = async (id) => {
     if (await swal("Are you sure you want to delete this spot?", {
   buttons: ['no, save it!', 'Yes, delete post!']
@@ -78,6 +77,7 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
   setErrorMessage(error);
   return (
     <>
+    {/* Creates dynamic HTML of data */}
       {arr.forEach((spot) => {
         //  console.log(spot)
 
@@ -92,6 +92,7 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
           </div>
           
           </div>`;
+          // Send HTML to spotsPage componenet for rendering card
         document.getElementById("render-objects").innerHTML = output;
       })}
     </>

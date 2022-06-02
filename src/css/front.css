@@ -3,72 +3,44 @@
 
 
 .background {
-
-min-height: 100vh;
-   
+    min-height: 100vh;
     background-image: url("../images/airport.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-
 }
-
 
 .card-row {
     display: flex;
     justify-content: center;
 }
 
-/* .render-objects {
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    gap: 0% 5%;
-    display: grid;
-    grid-template-columns: auto auto auto;
-} */
-
-
-
 .header-title>h1 {
     display: flex;
-
     justify-content: center;
     color: white;
     font-family: 'Barlow Condensed',
-        sans-serif;
+    sans-serif;
     font-size: 7vw;
     font-weight: 600;
     letter-spacing: 1.5px;
     padding-top: 80px;
 }
 
-/* .card-row {
-    display: flex !important;
-
-} */
-
 .header-card,
 .image-card,
 .text-card {
-
     margin-bottom: 100px;
     border: none;
     border-radius: 18px;
 }
-
-.image-card,
-
 
 .header-card-text {
     color: rgb(249, 248, 248);
     font-size: 30px;
     padding: 5px;
     font-weight: 700;
-
     font-family: 'Barlow Condensed',
-        sans-serif;
+    sans-serif;
     background-color: grey;
     border-radius: 30px;
     padding: 20px;
@@ -85,5 +57,4 @@ min-height: 100vh;
     height: 50px;
     border-radius: 50px;
     font-size: 20px;
-
 }

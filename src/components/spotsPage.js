@@ -46,7 +46,6 @@ function SpotsPage() {
           />
         )}
         <div id="render-objects"></div>
-        <div id="message"></div>
       </div>
     </>
   );

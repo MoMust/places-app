@@ -10,7 +10,6 @@
     background-color: #53554f;
     width: 100%;
     height: 180px;
-
 }
 
 .header-front {
@@ -29,12 +28,11 @@
 
 .nav-wrapper {
     height: 45%;
-
 }
 
 nav ul {
     font-family: 'Barlow Condensed',
-        sans-serif;
+    sans-serif;
     display: flex;
     justify-content: space-between;
     padding: 0;
@@ -48,7 +46,6 @@ nav ul {
     list-style: none;
     text-decoration: none;
     color: #ecebe8;
-
     letter-spacing: 1.5px;
     position: relative;
     list-style: none;
@@ -64,7 +61,6 @@ nav ul {
 .nav-items:after {
     content: "";
     position: absolute;
-    /* background-color: rgb(35, 99, 99); */
     background-color: #107e7d;
     height: 5px;
     width: 0;
@@ -83,7 +79,6 @@ nav ul {
 }
 
 .logo-image {
-
     height: 80px;
 }
 
@@ -93,12 +88,13 @@ nav ul {
         height: 50px;
     }
 }
-
+.icon-text>a{
+    text-decoration: none;
+}
 .icon-text>a>p {
     font-family: 'Barlow Condensed',
-        sans-serif;
+    sans-serif;
     color: #f3f5f9;
-    /* color: #2F2F2F; */
     font-size: 70px;
     font-weight: 700;
     height: 100px;
