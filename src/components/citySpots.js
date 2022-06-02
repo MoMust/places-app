@@ -36,7 +36,6 @@ function citySpots() {
           />
         )}
 
-        {}
         {/* Get data and pass to Spots component - Get state of card to update card */}
         {data && (
           <Spots
@@ -46,12 +45,8 @@ function citySpots() {
             cardDescription={cardDescription}
           />
         )}
-        <div className="make-container">
-          <div className="make-text">
-            <h2 id="header-text"></h2>
-          </div>
-        </div>
         <div id="render-objects"></div>
+        <div id="message"></div>
       </div>
     </>
   );

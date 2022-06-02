@@ -159,7 +159,7 @@
     display: grid;
     grid-template-columns: 400px;
     grid-template-rows: 70px 350px 100px;
-    grid-template-areas: "text""stats";
+    grid-template-areas: "text";
     border: none;
     border-radius: 18px;
     background: rgba(255, 254, 254, 0.843);

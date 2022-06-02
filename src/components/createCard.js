@@ -13,7 +13,7 @@ function createCard({setCardName, setCardDescription, errorMessage }) {
 //Set state based on what user inputs
 const [name, setName] = useState("")
 const [description, setDescription] = useState("")
-const [city, setCity] = useState("")
+
 
 
 // const [city, setCity] = useState("Stockholm")

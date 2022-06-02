@@ -20,17 +20,13 @@ let cityKey = "";
  * @returns Template literal - HTML to DOM
  */
 function CityList({ cities }) {
-  //Check if its not an array if so set prop to a singel element array. (For singel objects)
-  // if (!Array.isArray(cities)){
-  //     cities = [cities];
-  // }
+
   let data = cities;
   let output = "";
   // console.log("cities")
   // console.log(data);
 
-  /* Run foreach for every object from the data passed to CityList */
-
+  /* Run foreach for every object from the data passed down to CityList */
   if (Array.isArray(data)) {
 
     data.forEach((city) => {

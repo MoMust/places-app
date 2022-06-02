@@ -29,7 +29,7 @@ function Browser() {
         //Save city id to localstorage
         localStorage.setItem("objId", element.cityId);
         let path = `../citySpots`;
-        
+
         navigate(path);
         location.reload();
 
@@ -47,17 +47,16 @@ function Browser() {
     // console.log(userInput)
   }
 
-  // console.log('Check data')
-  // console.log(data)
   return (
     <>
       {/* Get data and pass to CityList component */}
       {data && <CityList cities={data} />}
+      {/* Call nav componenet */}
       <Nav />
       {/* Main body rendering */}
-      <div id="body">
-        {/* Call nav componenet */}
 
+      <div id="body">
+        {/* If data fetched is delayd or not showing, show loading message state */}
         {isLoading && (
           <div className="loading-wrapper">
             <div className="loading">Loading...</div>
@@ -75,7 +74,7 @@ function Browser() {
             </div>
           </div>
         )}
-
+        {/* Users private list of spots  */}
         {isLoading || (
           <a href="./citySpots">
             <div onClick={getInfo(0)}>
@@ -91,9 +90,9 @@ function Browser() {
           </a>
         )}
 
-        {/* Rendering objects*/}
+        {/* Rendering objects here*/}
+
         <div id="render-objects"></div>
-        {/* If data fetched is not showing, show loading message state */}
       </div>
     </>
   );

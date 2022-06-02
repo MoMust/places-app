@@ -1,19 +1,19 @@
 // import Create from './create'
 import { useState } from "react";
-
-// Get saved city id from browser page and save in variabel
-let cityKey = localStorage.getItem("objId");
-
+import swal from "sweetalert";
 
 
 //Function/component - To get spots in each city
-/**
+/**import swal from 'sweetalert';
  * @function spots function takes data from useFetch and shows only matched spots for city thats clicked on
 
  * @param {obj} spots - Data from fetch
  * @param {string} cardName - Gets the name of the card from createCard componenet, for POST request
  * @param {string} cardDescription - Gets the description of the card from createCard componenet, for POST request
  */
+// Get saved city id from browser page and save in variabel
+let cityKey = localStorage.getItem("objId");
+
 function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
   //Check if its not an array if so set prop to a singel element array. (For singel objects)
   const [error, setError] = useState("");
@@ -21,12 +21,9 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
   let arr = [];
   let output = "";
   let message = "";
-  let header = "";
   // console.log('Citydata')
   // console.log(cityData)
-  
-  // console.log('cityData')
-  // console.log(cityData)
+
   //To get spots related to city
   //Chek if cityKey matches spots reference key
 
@@ -37,26 +34,12 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
       continue;
       //Key matches, create an array with matching objects
     } else {
-      console.log(cityData[i])
+      // console.log(cityData[i])
       arr.push(cityData[i]);
-      
-      
-      // console.log(arr);
     }
   }
-  console.log(cityKey)
+  // console.log(cityKey)
  
-  for (let i = 0; i < cityData.length; i++) {
-    const element = cityData[i];
-    if (cityKey != element.cityRefId) {
-       
-       continue;
-    }else{
-      header = cityData[i].city;
-      break;
-    }
-   
-  }
 
   //Make DELETE of card when delete button is clicked
   window.handleClickDel = (id) => {
@@ -73,7 +56,8 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
     if (cardName == "" && cardDescription == "") {
       message = "You have to input name and/-or description";
       setError(message);
-      console.log("message");
+      // Send pop up message
+    swal('You have to input name and/-or description at the form')
     } else {
       fetch(`http://localhost:8000/dataSpots/` + id, {
         method: "PUT",
@@ -106,7 +90,6 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
           </div>
           
           </div>`;
-        document.getElementById("header-text").innerHTML = header;
         document.getElementById("render-objects").innerHTML = output;
       })}
     </>
