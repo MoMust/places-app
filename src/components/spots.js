@@ -42,8 +42,10 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
  
 
   //Make DELETE of card when delete button is clicked
-  window.handleClickDel = (id) => {
-    if (window.confirm("Are you sure you want to delete this spot?")) {
+  window.handleClickDel = async (id) => {
+    if (await swal("Are you sure you want to delete this spot?", {
+  buttons: ['no, save it!', 'Yes, delete post!']
+})) {
       fetch("http://localhost:8000/dataSpots/" + id, {
         method: "DELETE",
       }).then(() => {
