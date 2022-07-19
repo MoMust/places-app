@@ -2,7 +2,6 @@
 import { useState } from "react";
 import swal from "sweetalert";
 
-
 //Function/component - To get spots in each city
 /**import swal from 'sweetalert';
  * @function spots function takes data from useFetch and shows only matched spots for city thats clicked on

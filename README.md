@@ -1,4 +1,5 @@
 # Project Title
+
 Places
 
 ## Description
@@ -7,13 +8,12 @@ This is a web app where users can explore cities and populare places within each
 
 ### Executing program
 
-* How to run the program
+How to run the program
+
 Start react: npm start
 Start json-server: npm run server
 
-
 ## Authors
 
-Mohammed Mustafa 
+Mohammed Mustafa
 https://www.linkedin.com/in/moemustafafrontend/
-
