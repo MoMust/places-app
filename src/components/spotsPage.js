@@ -2,7 +2,7 @@ import "../css/browser.css";
 import "../css/front.css";
 import Spots from "./spots";
 import useFetch from "./useFetch";
-import Nav from "./nav";
+import Header from "./header";
 import CreateCard from "./createCard";
 import { useState } from "react";
 //This is places page
@@ -11,7 +11,7 @@ import { useState } from "react";
  */
 function SpotsPage() {
   //Run useFetch function, return data from db and is loading state,
-  const { data, isLoading } = useFetch(`http://localhost:8000/dataSpots`);
+  const { dataSpots, isLoading } = useFetch(`http://localhost:8000/dataSpots`);
   //Set state for updating card from createCard to spots
   
   const [cardName, setCardName] = useState("");
@@ -20,8 +20,8 @@ function SpotsPage() {
   return (
     <>
       <div id="body">
-        {/* Call nav componenet */}
-        <Nav />
+        {/* Call Header componenet */}
+        <Header />
         {/* If data fetched is not showing, show loading message state */}
         {/* If data is OK Call createCard component - for creating new custom card - Gets state of input to update in Spots componenet*/}
         {(isLoading && (
@@ -37,10 +37,10 @@ function SpotsPage() {
         )}
 
         {/* Get data and pass to Spots component - Get state of card to update card */}
-        {data && (
+        {dataSpots && (
           <Spots
             setErrorMessage={setErrorMessage}
-            spots={data}
+            spots={dataSpots}
             cardName={cardName}
             cardDescription={cardDescription}
           />

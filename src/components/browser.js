@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import "../css/browser.css";
 import createImg from "../images/creation-icon-20.jpg";
 import useFetch from "./useFetch";
-import Nav from "./nav";
+import Header from "./header";
 import Cities from "./cities";
 /**
  * A component - renders browser page
@@ -11,7 +11,7 @@ import Cities from "./cities";
 //This is browser page
 function Browser() {
   //Run useFetch function, return data of db and is loading state,
-  const { data, isLoading } = useFetch(`http://localhost:8000/dataCities`);
+  const { dataSpots, isLoading } = useFetch(`http://localhost:8000/dataCities`);
 
   let navigate = useNavigate();
   /**
@@ -21,8 +21,8 @@ function Browser() {
     let userInput = document.getElementById("search").value;
 
     //Checks user input and displays correct spots
-    for (let i = 0; i < data.length; i++) {
-      let element = data[i];
+    for (let i = 0; i < dataSpots.length; i++) {
+      let element = dataSpots[i];
 
       //If input matches show spots
       if (element.name.toUpperCase() == userInput.toUpperCase()) {
@@ -49,9 +49,9 @@ function Browser() {
   return (
     <>
       {/* Get data and pass to CityList component */}
-      {data && <Cities cities={data} />}
+      {dataSpots && <Cities cities={dataSpots} />}
       {/* Call nav componenet */}
-      <Nav />
+      <Header />
       {/* Main body rendering */}
 
       <div id="body">

@@ -44,6 +44,35 @@
     background-color: grey;
     border-radius: 30px;
     padding: 20px;
+    
+}
+
+.nav-items-front {
+    font-size: 30px;
+    font-weight: 600;
+    list-style: none;
+    text-decoration: none;
+    
+    letter-spacing: 1.5px;
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+    padding: 0 10px;
+
+    background: #3696c6;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+
+}
+
+.nav-items-front:hover {
+    color: rgb(235, 233, 233) !important;
+    background: #5daad1;
+
 }
 
 .btn-front {
