@@ -47,7 +47,7 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
       fetch("http://localhost:8000/dataSpots/" + id, {
         method: "DELETE",
       }).then(() => {
-        location.reload();
+        window.location.reload();
       });
     }
   };
@@ -69,7 +69,7 @@ function Spots({ spots, cardName, cardDescription, setErrorMessage }) {
         }),
       }).then(() => {
         console.log("Spot updated");
-        location.reload();
+        window.location.reload();
       });
     }
   };

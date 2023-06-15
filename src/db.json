@@ -96,18 +96,25 @@
       "cityRefId": 3
     },
     {
-      "name": "xzcdzcx",
-      "description": "zxczxczx",
-      "cityRefId": "0",
-      "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_fit,w_202/v1653685815/creation-icon-20_byfbzv.png",
-      "id": 11
-    },
-    {
       "name": "Västeråsplatsen",
       "description": "Intressant plats",
       "cityRefId": "4",
       "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_fit,w_202/v1653685815/creation-icon-20_byfbzv.png",
       "id": 12
+    },
+    {
+      "name": "New spot",
+      "description": "Amazing place",
+      "cityRefId": "0",
+      "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_fit,w_202/v1653685815/creation-icon-20_byfbzv.png",
+      "id": 13
+    },
+    {
+      "name": "Another spot",
+      "description": "Pretty cool",
+      "cityRefId": "0",
+      "image": "https://res.cloudinary.com/dfqx0ptfj/image/upload/c_fit,w_202/v1653685815/creation-icon-20_byfbzv.png",
+      "id": 14
     }
   ]
 }

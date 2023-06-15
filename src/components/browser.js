@@ -31,7 +31,7 @@ function Browser() {
         let path = `../spotsPage`;
 
         navigate(path);
-        location.reload();
+        window.location.reload();
 
         console.log(element);
         console.log(element.cityId);
@@ -73,8 +73,9 @@ function Browser() {
             </div>
           </div>
         )}
+        {/* Not in use for now */}
         {/* Users private list of spots  */}
-        {isLoading || (
+        {/* {isLoading || (
           <a href="./spotsPage">
             <div onClick={getInfo(0)}>
               <div className="user-list-container">
@@ -87,7 +88,7 @@ function Browser() {
               </div>
             </div>
           </a>
-        )}
+        )} */}
 
         {/* Rendering objects here*/}
 

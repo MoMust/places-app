@@ -1,4 +1,4 @@
-import { useState} from "react"
+import React, { useState} from "react"
 
 // Get saved city object id from local storage and save in variabel
 let cityKey = localStorage.getItem('objId');
@@ -8,7 +8,7 @@ let cityKey = localStorage.getItem('objId');
  * @param {string} setCardDescription -  Set user input description to be used in spots for POST request
  *  @param {string} errorMessage - Takes a variabel containing a string of an error message
  */
-function createCard({setCardName, setCardDescription, errorMessage }) {
+function CreateCard({setCardName, setCardDescription, errorMessage }) {
 
 //Set state based on what user inputs
 const [name, setName] = useState("")
@@ -43,7 +43,7 @@ setCardDescription(description)
     body: JSON.stringify(card)
   }).then(() =>{
     console.log('New spot added')
-    location.reload();
+    window.location.reload();
   })
 
 }
@@ -92,4 +92,4 @@ setCardDescription(description)
   );
   }
 
-export default createCard
+export default CreateCard
